@@ -1,0 +1,36 @@
+36:<section class="hero">
+78:  <div class="trust-track" id="trustTrack"></div>
+82:<section class="section bg-ivory">
+87:        <h2 class="h2">People Are Complex.<br>Hiring Them Doesn't Have to Be.</h2>
+100:    <div class="grid g3 mt-4" id="featureBlocks">
+136:<section class="section bg-cream" id="services">
+140:      <h2 class="h2">What Can ARK Help You With?</h2>
+143:    <div class="grid g3 mt-4" id="servicesGrid"></div>
+148:<section class="section bg-ivory">
+152:      <h2 class="h2">The Employee Lifecycle, Handled.</h2>
+155:    <div class="lifecycle mt-4" id="lifecycle"></div>
+160:<section class="section bg-dark">
+164:      <h2 class="h2">Tell Us What You Need.</h2>
+167:    <div class="grid g2 mt-4" id="reqGrid"></div>
+172:<section class="section bg-green">
+177:        <h2 class="h2">Starting or Expanding a Business?</h2>
+202:<section class="section bg-ivory">
+207:        <h2 class="h2">Industries We Serve</h2>
+211:    <div class="grid g4" id="industryGrid"></div>
+216:<section class="section bg-dark">
+221:        <h2 class="h2">Talent Without Borders.</h2>
+223:        <div class="mt-3" id="routesList"></div>
+249:<section class="section bg-beige">
+254:        <h2 class="h2">Find Your Next Role.</h2>
+258:    <div class="grid g3" id="latestJobs"></div>
+266:<section class="section bg-ivory">
+270:      <h2 class="h2">Built for Businesses That Think Globally.</h2>
+272:    <div class="grid g3 mt-4" id="whyGrid"></div>
+283:<section class="section bg-cream">
+287:      <h2 class="h2">What Our Clients &amp; Candidates Say.</h2>
+289:    <div class="testi-slider mt-4" id="testiSlider"></div>
+302:<section class="section bg-ivory">
+307:        <h2 class="h2">Ideas for Better Hiring.</h2>
+311:    <div class="grid g3" id="insightsGrid"></div>
+316:<section class="section bg-dark">
+320:      <h2 class="display">Building a Team?<br>Let's Build It Together.</h2>

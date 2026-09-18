@@ -1,0 +1,6 @@
+7:  var CFG = window.ARK_CONFIG;
+8:  var ICONS = window.ARK_ICONS || {};
+110:  window.ARK_initFileDrop = initFileDrop;
+141:  window.ARK_waUrl = waUrl;
+152:  window.ARK_initApplyForm = function (job) {
+273:  window.ARK_initGenericForm = function (formId, opts) {

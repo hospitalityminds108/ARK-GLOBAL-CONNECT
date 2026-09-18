@@ -1,0 +1,2 @@
+type cards: 6 | category cards: 16 | role chips: 24
+console errors: 0

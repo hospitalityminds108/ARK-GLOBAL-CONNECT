@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>International Jobs | Overseas Opportunities | ARK Global Connect</title>
+<meta name="description" content="International jobs and overseas opportunities in the UAE, Saudi Arabia, Qatar, Maldives and beyond. Hospitality, IT and management roles with visa and relocation support.">
+<meta name="keywords" content="international jobs, overseas jobs, jobs in Dubai, jobs in Saudi Arabia, Gulf jobs, hospitality jobs abroad, overseas recruitment">
+<meta property="og:title" content="International Jobs | ARK Global Connect">
+<meta property="og:description" content="Overseas opportunities with visa, accommodation and relocation support.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://arkglobalconnect.com/jobs-international.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+
+<section class="page-hero dark">
+  <div class="hero-media" aria-hidden="true">
+    <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1920&q=80" alt="A global city skyline representing overseas opportunities" loading="eager" fetchpriority="high">
+  </div>
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><a href="jobs.html">Jobs</a><span>/</span><span>International Jobs</span></nav>
+    <span class="eyebrow light">Overseas Opportunities</span>
+    <h1 class="h1">International Jobs.</h1>
+    <p class="lead max-720">Build your career abroad. Opportunities in the UAE, Saudi Arabia, Qatar, Maldives and beyond — with visa, accommodation and relocation support where applicable.</p>
+    <div class="hero-actions mt-3">
+      <a href="jobs.html" class="btn btn-gold btn-lg">All Jobs</a>
+      <a href="jobs-india.html" class="btn btn-ghost-light btn-lg">Jobs in India</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-sm bg-ivory">
+  <div class="container">
+    <div class="filter-bar">
+      <div class="filter-row">
+        <div class="field search-input-wrap"><label for="q">Search</label><span id="searchIcon"></span><input type="text" id="q" placeholder="Job title, skill or keyword"></div>
+        <div class="field"><label for="fCountry">Country</label><select id="fCountry"></select></div>
+        <div class="field"><label for="fIndustry">Industry</label><select id="fIndustry"></select></div>
+        <div class="field"><label for="fType">Employment Type</label><select id="fType"></select></div>
+      </div>
+      <div class="flex justify-between items-center mt-2 flex-wrap gap-1">
+        <span class="small muted" id="resultCount">Loading…</span>
+        <button class="btn btn-outline btn-sm" id="clearFilters">Clear Filters</button>
+      </div>
+    </div>
+    <div class="grid g3 mt-4" id="jobsGrid"></div>
+  </div>
+</section>
+
+<section class="section bg-beige">
+  <div class="container max-820">
+    <div class="text-center mb-3 reveal"><span class="eyebrow center">FAQ</span><h2 class="h2">International Jobs — Questions</h2></div>
+    <div class="faq-item"><button class="faq-q">Do international jobs include visa support?<span></span></button><div class="faq-a"><p>Many do. Each listing states whether visa, accommodation, food and transportation are provided. Our Global Mobility team coordinates the process.</p></div></div>
+    <div class="faq-item"><button class="faq-q">Do I pay for overseas placement?<span></span></button><div class="faq-a"><p>No. ARK Global Connect never charges candidates for placement. Any legitimate government or visa fees are explained transparently in writing.</p></div></div>
+    <div class="faq-item"><button class="faq-q">Are the listed jobs real vacancies?<span></span></button><div class="faq-a"><p>Our consultants publish live and upcoming opportunities across India and international markets. If a role is not listed, submit your CV and we will match you to suitable openings as they arise.</p></div></div>
+  </div>
+</section>
+
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/jobs.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("searchIcon").innerHTML = window.ARK_ICONS.search;
+  var filters = { status: "active", scope: "International", q: "", country: "all", industry: "all", type: "all" };
+  var grid = document.getElementById("jobsGrid"), countEl = document.getElementById("resultCount");
+  function render() {
+    var jobs = window.ARK_applyFilters(window.ARKStore.all(), filters);
+    window.ARK_renderJobs(grid, jobs);
+    countEl.textContent = jobs.length + (jobs.length === 1 ? " opportunity found" : " opportunities found");
+  }
+  window.ARKStore.load().then(function () {
+    var active = window.ARKStore.active().filter(function (j) { return j.scope === "International"; });
+    window.ARK_fillSelect(document.getElementById("fCountry"), window.ARK_unique(active.map(function (j) { return j.country; })), "All Countries");
+    window.ARK_fillSelect(document.getElementById("fIndustry"), window.ARK_unique(active.map(function (j) { return j.industry; })), "All Industries");
+    window.ARK_fillSelect(document.getElementById("fType"), window.ARK_unique(active.map(function (j) { return j.type; })), "All Types");
+    render();
+  });
+  document.getElementById("q").addEventListener("input", function () { filters.q = this.value; render(); });
+  [["fCountry","country"],["fIndustry","industry"],["fType","type"]].forEach(function (p) {
+    document.getElementById(p[0]).addEventListener("change", function () { filters[p[1]] = this.value; render(); });
+  });
+  document.getElementById("clearFilters").addEventListener("click", function () {
+    filters = { status: "active", scope: "International", q: "", country: "all", industry: "all", type: "all" };
+    document.getElementById("q").value = "";
+    ["fCountry","fIndustry","fType"].forEach(function (id) { document.getElementById(id).value = "all"; });
+    render();
+  });
+});
+</script>
+</body>
+</html>

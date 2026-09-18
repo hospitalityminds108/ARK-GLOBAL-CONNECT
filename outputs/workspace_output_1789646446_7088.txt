@@ -1,0 +1,2 @@
+=== CONSOLE / ERRORS ===
+H1 INFO: {'h1Text': 'The Right Person\nChanges Everything.', 'h1Rect': {'x': 108, 'y': 244.0625, 'w': 1224, 'h': 129}, 'fontSize': '57.6px', 'lineHeight': '64.512px', 'color': 'rgb(44, 44, 44)', 'heroH': 679.34375}

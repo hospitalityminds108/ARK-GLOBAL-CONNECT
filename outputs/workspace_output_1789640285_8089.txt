@@ -1,0 +1,2 @@
+Result: JS result: 6 cards; count=6 opportunities found
+Result: JS result: 16 cards after clear

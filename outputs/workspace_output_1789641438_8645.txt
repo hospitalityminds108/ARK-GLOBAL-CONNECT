@@ -1,0 +1,60 @@
+=== BROWSER STATE ===
+URL: http://localhost:8080/index.html
+Title: ARK Global Konnect | Hire. Manage. Mobilise. Globally.
+Result: Navigated to http://localhost:8080/index.html (title: ARK Global Konnect | Hire. Manage. Mobilise. Globally., status: 200)
+
+Interactive elements (90):
+  [0] a "ARKARK Global KonnectHire · Manage · Mobilise" -> index.html
+  [1] a "Home" -> index.html
+  [2] button type="button" "Services"
+  [12] a "Industries" -> industries.html
+  [13] a "For Candidates" -> candidates.html
+  [14] a "About" -> about.html
+  [15] a "Insights" -> insights.html
+  [16] a "Contact" -> contact.html
+  [17] a "I Want to Hire" -> contact.html
+  [18] a "Find a Job" -> jobs.html
+  [20] a "Hire Talent" -> hire-talent.html
+  [21] a "Explore ARK Solutions" -> #services
+  [22] a "Explore Opportunities →" -> jobs.html
+  [23] a "Why businesses choose ARK →" -> about.html
+  [24] a "Learn more" -> hire-talent.html
+  [25] a "Learn more" -> executive-search.html
+  [26] a "Learn more" -> remote-hr.html
+  [27] a "Learn more" -> staffing.html
+  [28] a "Learn more" -> rpo.html
+  [29] a "Learn more" -> global-recruitment.html
+  [30] a "I need one person." -> hire-talent.html
+  [31] a "I need a senior leader." -> executive-search.html
+  [32] a "We hire continuously." -> rpo.html
+  [33] a "I need 50+ employees." -> staffing.html
+  [34] a "I need temporary staff." -> staffing.html
+  [35] a "I don't have an HR department." -> remote-hr.html
+  [36] a "I need employees from India for another country." -> global-recruitment.html
+  [37] a "I want ARK to help build my complete team." -> contact.html
+  [38] a "Build My Team" -> contact.html
+  [39] a "All industries →" -> industries.html
+  [40] a "Hospitality & TourismHotels, resorts & travel" -> industries.html
+  [41] a "IT & TechnologySoftware, data & infrastructure" -> industries.html
+  [42] a "Retail & Shopping CentresStores, malls & brands" -> industries.html
+  [43] a "BFSIBanking, finance & insurance" -> industries.html
+  [44] a "Restaurants & QSRFine dining & quick service" -> industries.html
+  [45] a "Real EstateDevelopers & property" -> industries.html
+  [46] a "Startups & SMEsFast-growing businesses" -> industries.html
+  [47] a "Healthcare & OtherCare, wellness & more" -> industries.html
+  [48] a "Explore Global Recruitment" -> global-recruitment.html
+  [49] a "View all jobs →" -> jobs.html
+  [50] a "Hotel Manager" -> job-detail.html?id=ark-hotel-manager-goa
+  [51] a "View Job" -> job-detail.html?id=ark-hotel-manager-goa
+  [52] a "Front Office Manager" -> job-detail.html?id=ark-front-office-manager-mumbai
+  [53] a "View Job" -> job-detail.html?id=ark-front-office-manager-mumbai
+  [54] a "Revenue Manager" -> job-detail.html?id=ark-revenue-manager-bengaluru
+  [55] a "View Job" -> job-detail.html?id=ark-revenue-manager-bengaluru
+  [56] a "Executive Chef" -> job-detail.html?id=ark-executive-chef-goa
+  [57] a "View Job" -> job-detail.html?id=ark-executive-chef-goa
+  [58] a "HR Manager" -> job-detail.html?id=ark-hr-manager-pune
+  [59] a "View Job" -> job-detail.html?id=ark-hr-manager-pune
+  [60] a "Software Developer" -> job-detail.html?id=ark-software-developer-bengaluru
+  [61] a "View Job" -> job-detail.html?id=ark-software-developer-bengaluru
+  [62] a "Browse All Opportunities" -> jobs.html
+  [63] a "More about ARK →" -> about.html

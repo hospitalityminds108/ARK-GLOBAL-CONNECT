@@ -1,0 +1,15 @@
+301:/* ---------- Requirement selector ---------- */
+398:.field input, .field select, .field textarea {
+403:.field textarea { resize: vertical; min-height: 120px; }
+404:.field input:focus, .field select:focus, .field textarea:focus {
+407:.field input.invalid, .field select.invalid, .field textarea.invalid { border-color: var(--red); box-shadow: 0 0 0 4px rgba(255,75,75,0.08); }
+412:.checkbox-field input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--deep-green); flex-shrink: 0; }
+424:.file-selected { display: none; align-items: center; justify-content: space-between; gap: 14px; padding: 14px 18px; background: var(--grad-green); border-radius: var(--radius-sm); border: 1px solid rgba(126,211,33,0.3); }
+425:.file-selected.show { display: flex; }
+426:.file-selected .fs-info { display: flex; align-items: center; gap: 12px; font-size: 0.88rem; }
+427:.file-selected .fs-info svg { width: 22px; height: 22px; color: var(--deep-green); }
+428:.file-selected .fs-remove { color: var(--red); font-size: 0.82rem; font-weight: 600; }
+533:.search-input-wrap { position: relative; }
+534:.search-input-wrap svg { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; color: var(--text-3); }
+535:.search-input-wrap input { padding-left: 46px; }
+571:.status-selected { background: rgba(30,58,46,0.12); color: var(--deep-green); }

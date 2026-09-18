@@ -1,0 +1,8 @@
+=== index.html ===
+=== about.html ===
+=== hire-talent.html ===
+=== admin.html ===
+
+=== main.js live check ===
+0
+0 logo-mark in main.js

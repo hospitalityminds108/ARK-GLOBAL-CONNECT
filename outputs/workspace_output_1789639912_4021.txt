@@ -1,0 +1,77 @@
+total 280
+drwxr-xr-x 10 user user  4096 Sep 17 10:10 .
+drwxr-xr-x 20 root root  4096 Jun 22 03:39 ..
+drwxr-xr-x  4 user user  4096 Jun 19 10:20 .agent_hooks
+drwxr-xr-x 10 root root  4096 Sep 17 09:56 .browser_data
+drwxr-xr-x  3 root root  4096 Jun 22 03:37 .psiphon_data
+-rw-r--r--  1 root root 12023 Sep 17 10:09 about.html
+-rw-r--r--  1 root root 12234 Sep 17 10:08 candidates.html
+-rw-r--r--  1 root root  9452 Sep 17 10:10 contact.html
+drwxr-xr-x  2 root root  4096 Sep 17 09:56 css
+drwxr-xr-x  2 root root  4096 Sep 17 09:55 data
+-rw-r--r--  1 root root 10539 Sep 17 10:04 executive-search.html
+-rw-r--r--  1 root root 10207 Sep 17 10:06 global-mobility.html
+-rw-r--r--  1 root root 10620 Sep 17 10:06 global-recruitment.html
+-rw-r--r--  1 root root 13056 Sep 17 10:03 hire-talent.html
+-rw-r--r--  1 root root 26160 Sep 17 10:01 index.html
+-rw-r--r--  1 root root  9935 Sep 17 10:09 industries.html
+-rw-r--r--  1 root root  8608 Sep 17 10:10 insights.html
+-rw-r--r--  1 root root  9686 Sep 17 10:07 internships.html
+-rw-r--r--  1 root root  1218 Sep 17 10:01 job-detail.html
+-rw-r--r--  1 root root  6027 Sep 17 10:07 jobs-india.html
+-rw-r--r--  1 root root  6205 Sep 17 10:07 jobs-international.html
+-rw-r--r--  1 root root  9182 Sep 17 10:01 jobs.html
+drwxr-xr-x  2 root root  4096 Sep 17 10:00 js
+drwxr-xr-x  2 root root  4096 Sep 17 10:11 outputs
+-rw-r--r--  1 root root 10497 Sep 17 10:03 permanent-recruitment.html
+-rw-r--r--  1 root root 10405 Sep 17 10:06 remote-hr.html
+-rw-r--r--  1 root root 10232 Sep 17 10:05 rpo.html
+-rw-r--r--  1 root root 10484 Sep 17 10:05 staffing.html
+drwxr-xr-x  2 root root  4096 Sep 17 10:11 summarized_conversations
+-rw-r--r--  1 root root  1894 Sep 17 10:01 thank-you.html
+-rw-r--r--  1 root root  1368 Sep 17 10:07 todo.md
+---TODO---
+# ARK GLOBAL KONNECT — Build Plan
+
+## 1. Foundation
+- [ ] js/config.js (site config, admin creds, EmailJS/WhatsApp placeholders)
+- [ ] css/style.css (brand palette, typography, components, animations)
+- [ ] js/main.js (header/footer injection, nav, scroll reveal, counters, floating CTA)
+- [ ] data/jobs.json (16+ realistic demo jobs)
+- [ ] js/jobs.js (job loading, filtering, card rendering)
+- [ ] js/job-detail.js (dynamic job page, SEO, JSON-LD, apply flow)
+- [ ] js/forms.js (validation, EmailJS, WhatsApp)
+- [ ] js/admin.js (login, dashboard, CRUD, import/export)
+
+## 2. Core Pages
+- [ ] index.html (full premium homepage)
+- [ ] jobs.html (job platform + filters)
+- [ ] job-detail.html (dynamic)
+- [ ] jobs-india.html (domestic)
+- [ ] jobs-international.html (international)
+- [ ] candidates.html (For Candidates + CV submission)
+- [ ] thank-you.html
+
+## 3. Service Pages
+- [x] hire-talent.html
+- [x] permanent-recruitment.html
+- [x] executive-search.html
+- [x] staffing.html
+- [x] rpo.html
+- [x] remote-hr.html
+- [x] global-recruitment.html
+- [x] global-mobility.html
+- [x] internships.html
+
+## 4. Company Pages
+- [ ] industries.html
+- [ ] about.html
+- [ ] insights.html
+- [ ] contact.html
+
+## 5. Admin
+- [ ] admin.html (login + dashboard + add/edit job + applications + settings)
+
+## 6. Finalize
+- [ ] README.md
+- [ ] Verify links, responsive, deploy preview

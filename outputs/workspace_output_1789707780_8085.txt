@@ -1,0 +1,6 @@
+=== logo-text in HTML ===
+admin.html
+=== logo-img refs ===
+js/main.js:119:          '<img src="assets/logo.png" class="logo-img" alt="ARK Global Connect" width="54" height="54">' +
+js/main.js:139:          '<img src="assets/logo.png" class="logo-img" alt="ARK Global Connect" width="54" height="54"></a>' +
+js/main.js:213:              '<img src="assets/logo.png" class="logo-img" alt="ARK Global Connect" width="54" height="54"></a>' +

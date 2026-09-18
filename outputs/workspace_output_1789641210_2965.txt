@@ -1,0 +1,88 @@
+total 332
+drwxr-xr-x 11 user user  4096 Sep 17 10:23 .
+drwxr-xr-x 20 root root  4096 Jun 22 03:39 ..
+drwxr-xr-x  4 user user  4096 Jun 19 10:20 .agent_hooks
+drwxr-xr-x 10 root root  4096 Sep 17 09:56 .browser_data
+drwxr-xr-x  3 root root  4096 Jun 22 03:37 .psiphon_data
+drwxr-xr-x  2 root root  4096 Sep 17 10:22 .screenshots
+-rw-r--r--  1 root root  9423 Sep 17 10:20 README.md
+-rw-r--r--  1 root root 12081 Sep 17 10:22 about.html
+-rw-r--r--  1 root root 15000 Sep 17 10:22 admin.html
+-rw-r--r--  1 root root 12292 Sep 17 10:22 candidates.html
+-rw-r--r--  1 root root  9510 Sep 17 10:22 contact.html
+drwxr-xr-x  2 root root  4096 Sep 17 09:56 css
+drwxr-xr-x  2 root root  4096 Sep 17 09:55 data
+-rw-r--r--  1 root root 10597 Sep 17 10:22 executive-search.html
+-rw-r--r--  1 root root   277 Sep 17 10:22 favicon.svg
+-rw-r--r--  1 root root 10265 Sep 17 10:22 global-mobility.html
+-rw-r--r--  1 root root 10678 Sep 17 10:22 global-recruitment.html
+-rw-r--r--  1 root root 13114 Sep 17 10:22 hire-talent.html
+-rw-r--r--  1 root root 26218 Sep 17 10:22 index.html
+-rw-r--r--  1 root root  9993 Sep 17 10:22 industries.html
+-rw-r--r--  1 root root  8666 Sep 17 10:22 insights.html
+-rw-r--r--  1 root root  9744 Sep 17 10:22 internships.html
+-rw-r--r--  1 root root  1276 Sep 17 10:22 job-detail.html
+-rw-r--r--  1 root root  6085 Sep 17 10:22 jobs-india.html
+-rw-r--r--  1 root root  6263 Sep 17 10:22 jobs-international.html
+-rw-r--r--  1 root root  9240 Sep 17 10:22 jobs.html
+drwxr-xr-x  2 root root  4096 Sep 17 10:00 js
+-rw-r--r--  1 root root 11121 Sep 17 10:22 legal.html
+drwxr-xr-x  2 root root  4096 Sep 17 10:33 outputs
+-rw-r--r--  1 root root 10555 Sep 17 10:22 permanent-recruitment.html
+-rw-r--r--  1 root root 10463 Sep 17 10:22 remote-hr.html
+-rw-r--r--  1 root root 10290 Sep 17 10:22 rpo.html
+-rw-r--r--  1 root root 10542 Sep 17 10:22 staffing.html
+drwxr-xr-x  2 root root  4096 Sep 17 10:33 summarized_conversations
+-rw-r--r--  1 root root  1952 Sep 17 10:22 thank-you.html
+-rw-r--r--  1 root root  1429 Sep 17 10:21 todo.md
+---TODO---
+# ARK GLOBAL KONNECT — Build Plan
+
+## 1. Foundation
+- [x] js/config.js (site config, admin creds, EmailJS/WhatsApp placeholders)
+- [x] css/style.css (brand palette, typography, components, animations)
+- [x] js/main.js (header/footer injection, nav, scroll reveal, counters, floating CTA)
+- [x] data/jobs.json (16 realistic demo jobs)
+- [x] js/jobs.js (job loading, filtering, card rendering)
+- [x] js/job-detail.js (dynamic job page, SEO, JSON-LD, apply flow)
+- [x] js/forms.js (validation, EmailJS, WhatsApp)
+- [x] js/admin.js (login, dashboard, CRUD, import/export)
+
+## 2. Core Pages
+- [x] index.html (full premium homepage)
+- [x] jobs.html (job platform + filters)
+- [x] job-detail.html (dynamic)
+- [x] jobs-india.html (domestic)
+- [x] jobs-international.html (international)
+- [x] candidates.html (For Candidates + CV submission)
+- [x] thank-you.html
+
+## 3. Service Pages
+- [x] hire-talent.html
+- [x] permanent-recruitment.html
+- [x] executive-search.html
+- [x] staffing.html
+- [x] rpo.html
+- [x] remote-hr.html
+- [x] global-recruitment.html
+- [x] global-mobility.html
+- [x] internships.html
+
+## 4. Company Pages
+- [x] industries.html
+- [x] about.html
+- [x] insights.html
+- [x] contact.html
+
+## 5. Admin
+- [x] admin.html (login + dashboard + add/edit job + applications + settings)
+
+## 6. Finalize
+- [x] legal.html (privacy, terms, candidate, employer, fraud)
+- [x] README.md
+- [x] Verify links, responsive, deploy preview
+---CSS LINES---
+  710 css/style.css
+  377 js/main.js
+  458 index.html
+ 1545 total

@@ -1,0 +1,25 @@
+    header.innerHTML =
+      '<div class="container header-inner">' +
+        '<a href="index.html" class="logo" aria-label="ARK Global Connect home">' +
+          '' +
+          '<span class="logo-text"><b>ARK Global Connect</b><span>Hire · Manage · Mobilise</span></span>' +
+        "</a>" +
+        '<nav class="nav" aria-label="Primary">' + navHtml + "</nav>" +
+---
+    mobile.innerHTML =
+      '<div class="mobile-nav-head">' +
+        '<a href="index.html" class="logo">' +
+          '<span class="logo-text"><b>ARK Global Connect</b><span>Hire · Manage · Mobilise</span></span></a>' +
+        '<button class="mobile-nav-close" id="mobileClose" aria-label="Close menu">' + ICONS.x + "</button>" +
+      "</div>" +
+--- admin ---
+  <div class="login-card">
+    <a href="index.html" class="logo" aria-label="ARK Global Connect home">
+      
+      <span class="logo-text"><b>ARK Global Connect</b><span>Hire · Manage · Mobilise</span></span>
+    </a>
+    <aside class="admin-sidebar">
+      <a href="index.html" class="logo" aria-label="ARK Global Connect home">
+        
+        <span class="logo-text"><b>ARK Global Connect</b><span>Admin Console</span></span>
+      </a>

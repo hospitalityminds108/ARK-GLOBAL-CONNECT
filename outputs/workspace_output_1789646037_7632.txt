@@ -1,0 +1,18 @@
+=== about ===
+<section class="page-hero">
+  <div class="hero-media" aria-hidden="true">
+    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1920&q=80" alt="ARK Global Konnect consultants collaborating with a client team" loading="eager" fetchpriority="high">
+  </div>
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>About ARK</span></nav>
+    <span class="eyebrow">Who We Are</span>
+=== global-reach (dark) ===
+<section class="page-hero dark">
+  <div class="hero-media" aria-hidden="true">
+    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80" alt="A glowing globe representing ARK's worldwide reach" loading="eager" fetchpriority="high">
+  </div>
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>Global Reach</span></nav>
+    <span class="eyebrow light">Global Reach</span>
+=== count ===
+19

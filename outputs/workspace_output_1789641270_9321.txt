@@ -1,0 +1,8 @@
+done; remaining old tokens:
+#1E3A2E 0
+#FF4B4B 0
+#56B4E9 0
+#7ED321 0
+#D4AF7C 0
+#FAFAF8 0
+#263A2E 0

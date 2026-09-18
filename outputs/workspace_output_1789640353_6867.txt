@@ -1,0 +1,2 @@
+Result: JS result: submitted
+Result: JS result: applySuccess visible: true | apps stored: 1

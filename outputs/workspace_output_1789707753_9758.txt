@@ -1,0 +1,48 @@
+    header.id = "siteHeader";
+    header.innerHTML =
+      '<div class="container header-inner">' +
+        '<a href="index.html" class="logo" aria-label="ARK Global Connect home">' +
+          '<span class="logo-text"><b>ARK Global Connect</b><span>Hire · Manage · Mobilise</span></span>' +
+        "</a>" +
+        '<nav class="nav" aria-label="Primary">' + navHtml + "</nav>" +
+        '<div class="header-cta">' +
+          '<a href="hire.html" class="btn btn-outline btn-sm">I Want to Hire</a>' +
+          '<a href="jobs.html" class="btn btn-gold btn-sm">Find a Job</a>' +
+          '<button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">' +
+            "<span></span><span></span><span></span>" +
+          "</button>" +
+        "</div>" +
+      "</div>";
+    document.body.insertBefore(header, document.body.firstChild);
+
+    // Mobile nav
+    var mobile = document.createElement("div");
+    mobile.className = "mobile-nav";
+    mobile.id = "mobileNav";
+    mobile.innerHTML =
+      '<div class="mobile-nav-head">' +
+        '<a href="index.html" class="logo">' +
+          '<span class="logo-text"><b>ARK Global Connect</b><span>Hire · Manage · Mobilise</span></span></a>' +
+        '<button class="mobile-nav-close" id="mobileClose" aria-label="Close menu">' + ICONS.x + "</button>" +
+      "</div>" +
+      NAV.map(function (n) {
+        if (n.children) {
+          return '<div class="mobile-group"><span class="mobile-group-label">' + n.label + "</span>" +
+            n.children.map(function (c) { return '<a href="' + c.href + '">' + c.label + "</a>"; }).join("") + "</div>";
+=== FOOTER ===
+  function buildFooter() {
+    var footer = document.createElement("footer");
+    footer.className = "site-footer";
+    footer.innerHTML =
+      '<div class="container">' +
+        '<div class="footer-top">' +
+          '<div class="footer-brand">' +
+            '<a href="index.html" class="logo">' +
+              '<span class="logo-text"><b>ARK Global Connect</b><span>Hire · Manage · Mobilise</span></span></a>' +
+            '<p class="footer-tagline">Hire. Manage. Mobilise. Globally.</p>' +
+            '<p>Workforce. HR. Global Mobility. One Partner. From finding the right talent to managing your workforce and moving people across borders, ARK Global Connect helps businesses build stronger teams.</p>' +
+            '<ul class="footer-contact">' +
+              '<li>' + ICONS.mapPin + '<span>' + (CFG.ADDRESS_FULL || "Mumbai, India") + '</span></li>' +
+              '<li>' + ICONS.mail + '<a href="mailto:' + (CFG.COMPANY_EMAIL || "") + '">' + (CFG.COMPANY_EMAIL || "") + '</a></li>' +
+              '<li>' + ICONS.phone + '<a href="tel:' + (CFG.PHONE_TEL || "") + '">' + (CFG.PHONE_DISPLAY || "") + '</a></li>' +
+            '</ul>' +

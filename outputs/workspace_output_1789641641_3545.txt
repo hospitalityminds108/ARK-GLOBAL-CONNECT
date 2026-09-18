@@ -1,0 +1,13 @@
+=== old palette leftovers in css/js/html ===
+css/style.css.bak:9:  --ivory: #FAFAF8;
+css/style.css.bak:10:  --beige: #F3EDE6;
+css/style.css.bak:11:  --stone: #E8E3D9;
+css/style.css.bak:13:  --charcoal: #263A2E;
+css/style.css.bak:16:  --sky: #56B4E9;
+css/style.css.bak:17:  --green: #7ED321;
+css/style.css.bak:18:  --red: #FF4B4B;
+css/style.css.bak:20:  --gold: #D4AF7C;
+css/style.css.bak:29:  --deep-green: #1E3A2E;
+css/style.css.bak:37:  --grad-dark: linear-gradient(150deg, #1E3A2E 0%, #16281F 60%, #1F1F1F 100%);
+css/style.css.bak:38:  --grad-gold: linear-gradient(120deg, #D4AF7C 0%, #E8CFA6 50%, #C79E68 100%);
+=== done ===

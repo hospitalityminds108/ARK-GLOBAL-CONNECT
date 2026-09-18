@@ -1,0 +1,5 @@
+224:  function initReveal() {
+242:  function initCounters() {
+319:  window.ARK = {
+360:    initReveal();
+361:    initCounters();

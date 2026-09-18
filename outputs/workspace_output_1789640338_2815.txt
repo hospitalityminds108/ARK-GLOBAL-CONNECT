@@ -1,0 +1,1 @@
+Result: JS result: dispatched; cvError=Please upload your CV (PDF, DOC or DOCX).

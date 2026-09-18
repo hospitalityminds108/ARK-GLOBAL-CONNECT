@@ -1,0 +1,28 @@
+<section class="hero">
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1920&q=80" alt="International professionals collaborating in a modern global workplace" loading="eager">
+  </div>
+  <svg class="hero-globe" viewBox="0 0 600 600" fill="none" aria-hidden="true">
+===RESPONSIVE===
+  .admin-cards { grid-template-columns: 1fr 1fr; }
+  .login-card { padding: 32px 24px; }
+  .card, .job-card, .testi-card { padding: 24px; }
+  .apply-form { padding: 26px; }
+  .detail-card { padding: 22px; }
+  .page-hero { padding: calc(var(--header-h) + 46px) 0 46px; }
+  .process-step { gap: 16px; }
+  .process-step .ps-num { width: 44px; font-size: 1.35rem; }
+  .timeline { padding-left: 30px; }
+  .tl-item::before { left: -26px; }
+  .modal { padding: 26px; }
+}
+@media (max-width: 400px) {
+  .admin-cards { grid-template-columns: 1fr; }
+  .footer-top { grid-template-columns: 1fr; }
+  .hero-stats { gap: 20px; }
+===EASE VAR===
+52:  --radius-lg: 32px;
+58:  --shadow-lg: 0 30px 70px rgba(31, 31, 31, 0.14);
+61:  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+138:  transition: all 0.4s var(--ease); position: relative; overflow: hidden;
+141:.btn svg { width: 18px; height: 18px; transition: transform 0.4s var(--ease); }

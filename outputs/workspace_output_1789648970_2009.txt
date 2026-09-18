@@ -1,0 +1,4 @@
+120:          '<span class="logo-text"><b>ARK Global Connect</b><span>Hire · Manage · Mobilise</span></span>' +
+140:          '<span class="logo-text"><b>ARK Global Connect</b><span>Hire · Manage · Mobilise</span></span></a>' +
+212:          '<div class="footer-brand">' +
+214:              '<span class="logo-text"><b>ARK Global Connect</b><span>Hire · Manage · Mobilise</span></span></a>' +

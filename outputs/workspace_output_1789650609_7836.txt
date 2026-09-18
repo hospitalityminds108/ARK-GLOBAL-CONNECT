@@ -1,0 +1,66 @@
+=== 'demo' occurrences in source files ===
+./jobs-india.html:61:    <div class="faq-item"><button class="faq-q">Are the listed jobs real vacancies?<span></span></button><div class="faq-a"><p>This is a demonstration website. Jobs shown are sample positions created to demonstrate the platform and are clearly marked as demo content.</p></div></div>
+./admin.html:39:      <span><b>Demo credentials:</b> Admin ID <code>admin</code> · Password <code>ARK@2026</code>. Change these in <code>js/config.js</code>. This is a frontend-only interface — not secure for production data.</span>
+./admin.html:214:            <p class="small muted">Reset all local changes and reload the original demo jobs from <code>data/jobs.json</code>.</p>
+./admin.html:215:            <button id="resetBtn" class="btn btn-sm" style="background:var(--red);color:#fff;margin-top:14px">Reset Demo Data</button>
+./data/jobs.json:3:    "notice": "DEMO DATA — These are sample positions created to demonstrate the ARK Global Connect job platform. They are not confirmed live vacancies. Replace or remove them from the Admin panel before going live.",
+./data/jobs.json:12:      "company": "ARK Client — Luxury Resort (Demo)",
+./data/jobs.json:48:      "employerDescription": "A premium hospitality group operating luxury resorts and hotels across India. (Demo employer profile.)",
+./data/jobs.json:61:      "company": "ARK Client — Business Hotel (Demo)",
+./data/jobs.json:95:      "employerDescription": "A well-known business hotel brand in Mumbai. (Demo employer profile.)",
+./data/jobs.json:108:      "company": "ARK Client — Hotel Group (Demo)",
+./data/jobs.json:142:      "employerDescription": "A multi-property hotel group headquartered in Bengaluru. (Demo employer profile.)",
+./data/jobs.json:155:      "company": "ARK Client — Beach Resort (Demo)",
+./data/jobs.json:189:      "employerDescription": "A beachfront resort in Goa. (Demo employer profile.)",
+./data/jobs.json:202:      "company": "ARK Client — Manufacturing (Demo)",
+./data/jobs.json:236:      "employerDescription": "A fast-growing manufacturing SME near Pune. (Demo employer profile.)",
+./data/jobs.json:249:      "company": "ARK Client — SaaS Company (Demo)",
+./data/jobs.json:283:      "employerDescription": "A product-led SaaS company in Bengaluru. (Demo employer profile.)",
+./data/jobs.json:296:      "company": "ARK Client — 5-Star Hotel, Dubai (Demo)",
+./data/jobs.json:330:      "employerDescription": "A five-star international hotel in Dubai. (Demo employer profile.)",
+./data/jobs.json:343:      "company": "ARK Client — Hotel Group, Abu Dhabi (Demo)",
+./data/jobs.json:377:      "employerDescription": "A leading hotel group in Abu Dhabi. (Demo employer profile.)",
+./data/jobs.json:390:      "company": "ARK Client — Hospitality Group, Riyadh (Demo)",
+./data/jobs.json:424:      "employerDescription": "A premium hospitality group in Riyadh. (Demo employer profile.)",
+./data/jobs.json:437:      "company": "ARK Client — Island Resort, Maldives (Demo)",
+./data/jobs.json:471:      "employerDescription": "A luxury island resort in the Maldives. (Demo employer profile.)",
+./data/jobs.json:484:      "company": "ARK Client — Fine Dining, Doha (Demo)",
+./data/jobs.json:518:      "employerDescription": "A fine-dining restaurant group in Doha. (Demo employer profile.)",
+./data/jobs.json:531:      "company": "ARK Client — Technology Firm, Dubai (Demo)",
+./data/jobs.json:565:      "employerDescription": "A technology services firm in Dubai. (Demo employer profile.)",
+./data/jobs.json:578:      "company": "ARK Client — Retail Chain (Demo)",
+./data/jobs.json:612:      "employerDescription": "A national retail chain. (Demo employer profile.)",
+./data/jobs.json:625:      "company": "ARK Client — Financial Services (Demo)",
+./data/jobs.json:659:      "employerDescription": "A financial services company in Mumbai. (Demo employer profile.)",
+./data/jobs.json:672:      "company": "ARK Client — Resort (Demo)",
+./data/jobs.json:705:      "employerDescription": "A resort in Goa offering structured internships. (Demo employer profile.)",
+./data/jobs.json:718:      "company": "ARK Client — Real Estate Developer (Demo)",
+./data/jobs.json:752:      "employerDescription": "A real estate developer in Gurugram. (Demo employer profile.)",
+./js/main.js:259:          '<span>Demo website · Frontend-only build · <a href="admin.html">Admin</a></span>' +
+./js/admin.js:5:   NOTE: Client-side auth is NOT secure. Demo/management only.
+./js/admin.js:167:        metaRow("EmailJS", CFG.emailjsReady() ? "Configured" : "Not configured (demo mode)") +
+./js/admin.js:340:  function resetDemo() {
+./js/admin.js:341:    confirmModal("Reset demo data?", "This clears your local changes and reloads the original demo jobs from jobs.json.", function () {
+./js/admin.js:403:      bind("resetBtn", "click", resetDemo);
+./js/config.js:35:  /* ---------- Admin (frontend-only demo login) ----------
+./js/config.js:44:     untouched to run in "demo mode" (email step is skipped gracefully). */
+./js/forms.js:130:      if (!ready) return { ok: false, demo: true };
+./js/forms.js:133:        .catch(function () { return { ok: false, demo: false }; });
+./js/forms.js:143:  /* ---------- Save application locally (demo) ---------- */
+./js/forms.js:252:      : (res.demo
+./js/forms.js:253:        ? "Email delivery is in demo mode (EmailJS not configured). Your application has been saved locally and you can send it instantly on WhatsApp below."
+./js/forms.js:262:          "<span><b>Note:</b> For your privacy, the CV file is not uploaded to any server in this frontend-only demo. Please attach your CV when sending on WhatsApp, or reply to our email with the file.</span></div>" +
+./js/forms.js:306:            : (res.demo ? "Email is in demo mode (EmailJS not configured). Your details were captured locally — please also send them on WhatsApp."
+./legal.html:49:          <p class="small muted mt-3">Last updated: January 2026. This is a demonstration website; policies are illustrative and should be reviewed by qualified legal counsel before production use.</p>
+./legal.html:65:          <p>This demonstration website stores form submissions and job data in your browser's local storage only. In a production deployment, data would be transmitted securely and retained only as long as necessary. We apply reasonable technical and organisational measures to protect personal information.</p>
+./legal.html:91:          <p>Roles shown on this website are illustrative demonstration listings unless otherwise stated. Real opportunities are confirmed directly by our consultants. We recommend verifying any offer through official channels before making decisions.</p>
+./jobs-international.html:61:    <div class="faq-item"><button class="faq-q">Are the listed jobs real vacancies?<span></span></button><div class="faq-a"><p>This is a demonstration website. Jobs shown are sample positions created to demonstrate the platform and are clearly marked as demo content.</p></div></div>
+./jobs.html:79:    <div class="faq-item"><button class="faq-q">Are the listed jobs real vacancies?<span></span></button><div class="faq-a"><p>This is a demonstration website. Jobs shown are sample positions created to demonstrate the platform and are clearly marked as demo content. Live vacancies will be published by the ARK team.</p></div></div>
+./README.md:74:│   └── jobs.json               # 16 demo jobs (6 international, 10 domestic)
+./README.md:101:Forms work out of the box in **demo mode**: submissions are captured locally and the user is offered a WhatsApp handoff. To send real emails:
+./README.md:123:- **Settings** — export jobs JSON, download a full backup, import jobs, restore a backup, reset demo data.
+./README.md:145:  "company": "ARK Client — Luxury Resort (Demo)",
+./README.md:191:4. Add real authentication (server-side sessions or a provider) to replace the demo admin login.
+./README.md:227:## 11. Demo Data Notice
+./README.md:229:All jobs in `data/jobs.json` are **fictional demonstration listings** and are labelled as such. Replace them with real vacancies before going live. The admin credentials and contact details are placeholders — update them in `js/config.js`.
+./README.md:239:© ARK Global Connect. Frontend-only demonstration build.

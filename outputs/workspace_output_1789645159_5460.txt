@@ -1,0 +1,42 @@
+## 2. Project Structure
+
+```
+/
+├── index.html                  # Homepage (15+ sections)
+├── hire-talent.html            # Flagship service page
+├── permanent-recruitment.html
+├── executive-search.html
+├── staffing.html
+├── rpo.html
+├── remote-hr.html
+├── global-recruitment.html
+├── global-mobility.html
+├── internships.html
+├── jobs.html                   # Job platform with live filters
+├── jobs-india.html             # Domestic roles
+├── jobs-international.html     # International roles
+├── job-detail.html             # Dynamic job page (?id=...)
+├── candidates.html             # For Candidates + CV submission
+├── industries.html             # 12 sectors
+├── about.html
+├── insights.html               # Blog / insights
+├── contact.html
+├── legal.html                  # Privacy, Terms, Candidate, Employer, Fraud
+├── admin.html                  # Admin console (login + dashboard)
+├── thank-you.html
+├── css/
+│   └── style.css               # Full design system
+├── js/
+│   ├── config.js               # ← EDIT THIS: brand, contact, admin, EmailJS
+│   ├── main.js                 # Header/footer injection, nav, reveal, counters
+│   ├── jobs.js                 # Job store, filtering, card rendering
+│   ├── job-detail.js           # Dynamic job page, SEO, JSON-LD, apply flow
+│   ├── forms.js                # Validation, EmailJS, WhatsApp, file upload
+│   └── admin.js                # Admin login, CRUD, import/export
+├── data/
+│   └── jobs.json               # 16 demo jobs (6 international, 10 domestic)
+└── README.md
+```
+
+---
+

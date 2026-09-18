@@ -1,0 +1,227 @@
+=== about ===
+<section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>About ARK</span></nav>
+    <span class="eyebrow">Who We Are</span>
+    <h1 class="h1">Workforce. HR. Global Mobility.<br>One Partner.</h1>
+    <p class="lead max-720">ARK Global Konnect exists for one reason: to help businesses build stronger teams. We bring together recruitment, HR and global mobility under a single partner, so growing organisations can focus on their business instead of the complexity of people.</p>
+  </div>
+</section>
+=== candidates ===
+<section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>For Candidates</span></nav>
+    <span class="eyebrow">Your Next Move</span>
+    <h1 class="h1">Your Career,<br>In Better Hands.</h1>
+    <p class="lead max-720">Whether you're actively looking or just open to the right opportunity, our consultants can connect you with roles that match your skills, ambitions and life. Always free for candidates.</p>
+    <div class="hero-actions mt-3">
+      <a href="#submitCv" class="btn btn-primary btn-lg">Submit Your CV</a>
+      <a href="jobs.html" class="btn btn-outline btn-lg">Browse Jobs</a>
+    </div>
+  </div>
+</section>
+=== contact ===
+<section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>Contact</span></nav>
+    <span class="eyebrow">Get in Touch</span>
+    <h1 class="h1">Let's Talk About<br>Your People.</h1>
+    <p class="lead max-720">Whether you're hiring, growing or going global — or looking for your next role — we'd love to hear from you. Tell us what you need and we'll respond promptly.</p>
+  </div>
+</section>
+=== executive-search ===
+<section class="page-hero dark">
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><a href="hire-talent.html">Hire Talent</a><span>/</span><span>Executive Search</span></nav>
+    <span class="eyebrow light">Confidential Leadership Hiring</span>
+    <h1 class="h1">Leaders Who Move<br>the Whole Business.</h1>
+    <p class="lead max-720">At the top, a hire isn't just a role — it's a direction. Our executive search practice finds leaders who can set strategy, build teams and deliver under pressure, with complete discretion throughout.</p>
+    <div class="hero-actions mt-3">
+      <a href="contact.html" class="btn btn-gold btn-lg">Discuss a Leadership Role</a>
+      <a href="about.html" class="btn btn-ghost-light btn-lg">About ARK</a>
+    </div>
+  </div>
+</section>
+=== global-mobility ===
+<section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>Global Mobility</span></nav>
+    <span class="eyebrow">Mobilise With Confidence</span>
+    <h1 class="h1">Moving People,<br>Not Just Paperwork.</h1>
+    <p class="lead max-720">Relocating an employee across borders involves visas, documents, travel, housing and compliance. Our Global Mobility team manages every step, so your people arrive ready and your business stays compliant.</p>
+    <div class="hero-actions mt-3">
+      <a href="contact.html" class="btn btn-primary btn-lg">Plan a Relocation</a>
+      <a href="jobs-international.html" class="btn btn-outline btn-lg">View International Jobs</a>
+    </div>
+  </div>
+</section>
+=== global-reach ===
+<section class="page-hero dark">
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>Global Reach</span></nav>
+    <span class="eyebrow light">Global Reach</span>
+    <h1 class="h1" style="color:var(--light)">One Partner.<br>Every Market.</h1>
+    <p class="lead max-720" style="color:rgba(255,255,255,0.78)">From India to the Gulf, Europe and Asia Pacific — ARK Global Konnect connects skilled talent with employers across the world, ethically and transparently, with full documentation and mobilisation support.</p>
+    <div class="hero-actions mt-3">
+      <a href="contact.html" class="btn btn-gold btn-lg">Discuss Your Market</a>
+      <a href="jobs-international.html" class="btn btn-ghost-light btn-lg">International Jobs</a>
+    </div>
+  </div>
+</section>
+=== global-recruitment ===
+<section class="page-hero dark">
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>Global Recruitment</span></nav>
+    <span class="eyebrow light">Cross-Border Hiring</span>
+    <h1 class="h1">Talent Has No<br>Borders. Neither Do We.</h1>
+    <p class="lead max-720">The best person for the role may not live in the same country as the job. Global recruitment lets you hire across borders — with the visa, relocation and compliance complexity handled for you.</p>
+    <div class="hero-actions mt-3">
+      <a href="contact.html" class="btn btn-gold btn-lg">Hire Internationally</a>
+      <a href="jobs-international.html" class="btn btn-ghost-light btn-lg">View International Jobs</a>
+    </div>
+  </div>
+</section>
+=== hire-talent ===
+<section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>Hire Talent</span></nav>
+    <span class="eyebrow">Permanent Recruitment &amp; Talent Acquisition</span>
+    <h1 class="h1">The Right Person<br>Changes Everything.</h1>
+    <p class="lead max-720">A single great hire can lift a team, a function or an entire business. A wrong one costs time, money and momentum. ARK Global Konnect helps you hire with confidence — combining human judgement with a structured, technology-supported search process.</p>
+    <div class="hero-actions mt-3">
+      <a href="contact.html" class="btn btn-primary btn-lg">Start a Search</a>
+      <a href="jobs.html" class="btn btn-outline btn-lg">Browse Open Roles</a>
+    </div>
+  </div>
+</section>
+=== industries ===
+<section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>Industries</span></nav>
+    <span class="eyebrow">Sector Expertise</span>
+    <h1 class="h1">Industries We Serve.</h1>
+    <p class="lead max-720">Great hiring is sector-specific. A hospitality hire is not an IT hire. We bring genuine industry knowledge to every search, so we understand the roles, the skills and the people who succeed in them.</p>
+    <div class="hero-actions mt-3">
+      <a href="contact.html" class="btn btn-primary btn-lg">Discuss Your Sector</a>
+      <a href="jobs.html" class="btn btn-outline btn-lg">Browse Jobs</a>
+    </div>
+  </div>
+</section>
+=== insights ===
+<section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>Insights</span></nav>
+    <span class="eyebrow">Perspectives</span>
+    <h1 class="h1">Insights &amp; Ideas.</h1>
+    <p class="lead max-720">Practical thinking on hiring, workforce management, HR and global mobility — written for employers and candidates who want to make better people decisions.</p>
+  </div>
+</section>
+=== internships ===
+<section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>Internships</span></nav>
+    <span class="eyebrow">Early Careers</span>
+    <h1 class="h1">Start Somewhere<br>That Actually Starts You.</h1>
+    <p class="lead max-720">An internship should be more than a line on a CV. We connect students and early-career talent with real roles where you learn, contribute and build a foundation for your career.</p>
+    <div class="hero-actions mt-3">
+      <a href="jobs.html" class="btn btn-primary btn-lg">Find an Internship</a>
+      <a href="candidates.html" class="btn btn-outline btn-lg">Submit Your CV</a>
+    </div>
+  </div>
+</section>
+=== jobs-india ===
+<section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><a href="jobs.html">Jobs</a><span>/</span><span>Jobs in India</span></nav>
+    <span class="eyebrow">Domestic Opportunities</span>
+    <h1 class="h1">Jobs in India.</h1>
+    <p class="lead max-720">Opportunities across India's fastest-growing industries and cities — from hospitality and IT to retail, BFSI and management. Filter by city, industry and experience.</p>
+    <div class="hero-actions mt-3">
+      <a href="jobs.html" class="btn btn-outline btn-lg">All Jobs</a>
+      <a href="jobs-international.html" class="btn btn-outline btn-lg">International Jobs</a>
+    </div>
+  </div>
+</section>
+=== jobs-international ===
+<section class="page-hero dark">
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><a href="jobs.html">Jobs</a><span>/</span><span>International Jobs</span></nav>
+    <span class="eyebrow light">Overseas Opportunities</span>
+    <h1 class="h1">International Jobs.</h1>
+    <p class="lead max-720">Build your career abroad. Opportunities in the UAE, Saudi Arabia, Qatar, Maldives and beyond — with visa, accommodation and relocation support where applicable.</p>
+    <div class="hero-actions mt-3">
+      <a href="jobs.html" class="btn btn-gold btn-lg">All Jobs</a>
+      <a href="jobs-india.html" class="btn btn-ghost-light btn-lg">Jobs in India</a>
+    </div>
+  </div>
+</section>
+=== jobs ===
+<section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>Jobs</span></nav>
+    <span class="eyebrow">Opportunities</span>
+    <h1 class="h1">Find Your Next Opportunity.</h1>
+    <p class="lead max-720">Search roles across India and international markets. Filter by location, industry, experience and more — results update instantly.</p>
+  </div>
+</section>
+=== legal ===
+<section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>Legal</span></nav>
+    <span class="eyebrow">Legal &amp; Policies</span>
+    <h1 class="h1">Clear, Honest,<br>Straightforward.</h1>
+    <p class="lead max-720">How we handle your data, the terms that govern our services, and the commitments we make to candidates and employers. We believe good business is transparent business.</p>
+  </div>
+</section>
+=== permanent-recruitment ===
+<section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><a href="hire-talent.html">Hire Talent</a><span>/</span><span>Permanent Recruitment</span></nav>
+    <span class="eyebrow">Full-Time Hiring</span>
+    <h1 class="h1">Permanent Recruitment,<br>Done Properly.</h1>
+    <p class="lead max-720">Full-time hires shape your business for years. We run a disciplined, transparent search that finds people who will still be delivering value long after the probation period ends.</p>
+    <div class="hero-actions mt-3">
+      <a href="contact.html" class="btn btn-primary btn-lg">Brief Us on a Role</a>
+      <a href="jobs.html" class="btn btn-outline btn-lg">Browse Open Roles</a>
+    </div>
+  </div>
+</section>
+=== remote-hr ===
+<section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>Remote HR</span></nav>
+    <span class="eyebrow">Outsourced HR Operations</span>
+    <h1 class="h1">HR That Runs<br>Without a HR Department.</h1>
+    <p class="lead max-720">You don't need a full HR team to have great HR. Remote HR gives you experienced HR professionals, systems and processes — on demand, at a fraction of the cost of building it in-house.</p>
+    <div class="hero-actions mt-3">
+      <a href="contact.html" class="btn btn-primary btn-lg">Talk to an HR Specialist</a>
+      <a href="jobs.html" class="btn btn-outline btn-lg">Browse Open Roles</a>
+    </div>
+  </div>
+</section>
+=== rpo ===
+<section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>RPO</span></nav>
+    <span class="eyebrow">Recruitment Process Outsourcing</span>
+    <h1 class="h1">Your Hiring Function,<br>Run by Specialists.</h1>
+    <p class="lead max-720">When hiring becomes constant, it stops being a project and becomes a function. RPO lets you hand that function to a dedicated team — without the cost and complexity of building it in-house.</p>
+    <div class="hero-actions mt-3">
+      <a href="contact.html" class="btn btn-primary btn-lg">Explore RPO</a>
+      <a href="jobs.html" class="btn btn-outline btn-lg">Browse Open Roles</a>
+    </div>
+  </div>
+</section>
+=== staffing ===
+<section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>Staffing Solutions</span></nav>
+    <span class="eyebrow">Flexible Workforce</span>
+    <h1 class="h1">Staffing That Flexes<br>With Your Demand.</h1>
+    <p class="lead max-720">Business doesn't move in straight lines. Seasons peak, projects start, orders surge. Our staffing solutions give you the people you need, when you need them — without the long-term commitment of permanent headcount.</p>
+    <div class="hero-actions mt-3">
+      <a href="contact.html" class="btn btn-primary btn-lg">Request Staff</a>
+      <a href="jobs.html" class="btn btn-outline btn-lg">Browse Open Roles</a>
+    </div>
+  </div>
+</section>

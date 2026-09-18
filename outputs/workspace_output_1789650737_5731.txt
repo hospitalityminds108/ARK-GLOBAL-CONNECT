@@ -1,0 +1,18 @@
+      <span class="error-msg" id="loginError"></span>
+      <button type="submit" class="btn btn-primary btn-block mt-2">Sign In</button>
+    </form>
+    <div class="alert alert-info mt-3" style="font-size:0.82rem">
+      <span><b>Demo credentials:</b> Admin ID <code>admin</code> · Password <code>ARK@2026</code>. Change these in <code>js/config.js</code>. This is a frontend-only interface — not secure for production data.</span>
+    </div>
+    <p class="text-center mt-3"><a href="index.html" class="small muted">← Back to website</a></p>
+  </div>
+---
+            </div>
+          </div>
+          <div class="admin-panel" style="margin-top:18px;border-color:rgba(200,76,84,0.3)">
+            <h2 style="font-size:1.05rem">Danger Zone</h2>
+            <p class="small muted">Reset all local changes and reload the original demo jobs from <code>data/jobs.json</code>.</p>
+            <button id="resetBtn" class="btn btn-sm" style="background:var(--red);color:#fff;margin-top:14px">Reset Demo Data</button>
+          </div>
+        </div>
+      </section>

@@ -1,0 +1,203 @@
+=== jobs.html ===
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Find Your Next Opportunity | Jobs at ARK Global Konnect</title>
+<meta name="description" content="Search live job opportunities across India and international markets. Filter by country, city, industry, experience and employment type. Domestic and international roles in hospitality, IT, retail, BFSI and more.">
+<meta property="og:title" content="Find Your Next Opportunity | ARK Global Konnect">
+<meta property="og:description" content="Search domestic and international job opportunities with ARK Global Konnect.">
+<link rel="canonical" href="https://arkglobalkonnect.com/jobs.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+
+<section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>Jobs</span></nav>
+    <span class="eyebrow">Opportunities</span>
+    <h1 class="h1">Find Your Next Opportunity.</h1>
+    <p class="lead max-720">Search roles across India and international markets. Filter by location, industry, experience and more — results update instantly.</p>
+  </div>
+</section>
+
+<section class="section-sm bg-ivory">
+  <div class="container">
+    <!-- Category chips -->
+    <div class="chip-row mb-3" id="catChips">
+      <button class="chip active" data-cat="all">All Jobs</button>
+      <button class="chip" data-cat="India">Jobs in India</button>
+      <button class="chip" data-cat="International">International Jobs</button>
+      <button class="chip" data-cat="Hospitality">Hospitality Jobs</button>
+      <button class="chip" data-cat="IT">IT Jobs</button>
+      <button class="chip" data-cat="Management">Management Jobs</button>
+      <button class="chip" data-cat="Internships">Internships</button>
+    </div>
+
+    <!-- Filter bar -->
+    <div class="filter-bar">
+      <div class="filter-row">
+        <div class="field search-input-wrap">
+          <label for="q">Search</label>
+          <span id="searchIcon"></span>
+          <input type="text" id="q" placeholder="Job title, skill or keyword">
+        </div>
+        <div class="field"><label for="fCountry">Country</label><select id="fCountry"></select></div>
+        <div class="field"><label for="fScope">Domestic / International</label><select id="fScope"><option value="all">All</option><option>Domestic</option><option>International</option></select></div>
+        <div class="field"><label for="fIndustry">Industry</label><select id="fIndustry"></select></div>
+      </div>
+      <div class="filter-row mt-2">
+        <div class="field"><label for="fCity">City</label><select id="fCity"></select></div>
+        <div class="field"><label for="fDept">Department</label><select id="fDept"></select></div>
+        <div class="field"><label for="fType">Employment Type</label><select id="fType"></select></div>
+        <div class="field"><label for="fExp">Experience</label><select id="fExp"><option value="all">All</option><option value="0-2">0-2 Years</option><option value="3-5">3-5 Years</option><option value="6-10">6-10 Years</option><option value="10+">10+ Years</option></select></div>
+      </div>
+      <div class="flex justify-between items-center mt-2 flex-wrap gap-1">
+        <span class="small muted" id="resultCount">Loading…</span>
+        <button class="btn btn-outline btn-sm" id="clearFilters">Clear Filters</button>
+      </div>
+    </div>
+
+    <div class="grid g3 mt-4" id="jobsGrid"></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section bg-beige">
+  <div class="container max-820">
+    <div class="text-center mb-3 reveal"><span class="eyebrow center">FAQ</span><h2 class="h2">Job Search Questions</h2></div>
+    <div class="faq-item"><button class="faq-q">Does ARK charge candidates any fee?<span></span></button><div class="faq-a"><p>No. ARK Global Konnect never charges candidates for job placement, interviews or documentation. If anyone requests payment on our behalf, please report it immediately via our Recruitment Fraud Alert.</p></div></div>
+    <div class="faq-item"><button class="faq-q">How do I apply for a job?<span></span></button><div class="faq-a"><p>Open any job to view the full description, then complete the application form and upload your CV. You can also forward your application instantly on WhatsApp.</p></div></div>
+    <div class="faq-item"><button class="faq-q">Are the listed jobs real vacancies?<span></span></button><div class="faq-a"><p>This is a demonstration website. Jobs shown are sample positions created to demonstrate the platform and are clearly marked as demo content. Live vacancies will be published by the ARK team.</p></div></div>
+    <div class="faq-item"><button class="faq-q">Can I apply for international roles from India?<span></span></button><div class="faq-a"><p>Yes. Many of our roles are for international employers seeking talent from India. Each international job lists visa, accommodation and relocation information where applicable.</p></div></div>
+  </div>
+</section>
+
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/jobs.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var I = window.ARK_ICONS;
+  document.getElementById("searchIcon").innerHTML = I.search;
+  var filters = { status: "active", q: "", country: "all", scope: "all", industry: "all", city: "all", department: "all", type: "all", experience: "all", category: "all" };
+  var grid = document.getElementById("jobsGrid");
+  var countEl = document.getElementById("resultCount");
+
+  function render() {
+    var jobs = window.ARK_applyFilters(window.ARKStore.all(), filters);
+    window.ARK_renderJobs(grid, jobs);
+    countEl.textContent = jobs.length + (jobs.length === 1 ? " opportunity found" : " opportunities found");
+  }
+
+  window.ARK_clearFilters = function () {
+    filters = { status: "active", q: "", country: "all", scope: "all", industry: "all", city: "all", department: "all", type: "all", experience: "all", category: "all" };
+    document.getElementById("q").value = "";
+    ["fCountry","fScope","fIndustry","fCity","fDept","fType","fExp"].forEach(function (id) { document.getElementById(id).value = "all"; });
+    document.querySelectorAll("#catChips .chip").forEach(function (c, i) { c.classList.toggle("active", i === 0); });
+    render();
+  };
+
+  window.ARKStore.load().then(function (all) {
+    var active = window.ARKStore.active();
+    window.ARK_fillSelect(document.getElementById("fCountry"), window.ARK_unique(active.map(function (j) { return j.country; })), "All Countries");
+    window.ARK_fillSelect(document.getElementById("fIndustry"), window.ARK_unique(active.map(function (j) { return j.industry; })), "All Industries");
+    window.ARK_fillSelect(document.getElementById("fCity"), window.ARK_unique(active.map(function (j) { return j.city; })), "All Cities");
+    window.ARK_fillSelect(document.getElementById("fDept"), window.ARK_unique(active.map(function (j) { return j.department; })), "All Departments");
+    window.ARK_fillSelect(document.getElementById("fType"), window.ARK_unique(active.map(function (j) { return j.type; })), "All Types");
+    render();
+  });
+
+  document.getElementById("q").addEventListener("input", function () { filters.q = this.value; render(); });
+  [["fCountry","country"],["fScope","scope"],["fIndustry","industry"],["fCity","city"],["fDept","department"],["fType","type"],["fExp","experience"]].forEach(function (pair) {
+    document.getElementById(pair[0]).addEventListener("change", function () { filters[pair[1]] = this.value; render(); });
+  });
+  document.getElementById("clearFilters").addEventListener("click", window.ARK_clearFilters);
+
+  document.querySelectorAll("#catChips .chip").forEach(function (chip) {
+    chip.addEventListener("click", function () {
+      document.querySelectorAll("#catChips .chip").forEach(function (c) { c.classList.remove("active"); });
+      chip.classList.add("active");
+      var cat = chip.getAttribute("data-cat");
+      filters.category = "all"; filters.scope = "all"; filters.country = "all";
+      if (cat === "India") filters.scope = "Domestic";
+      else if (cat === "International") filters.scope = "International";
+      else if (cat === "Hospitality") filters.industry = "Hospitality & Tourism";
+      else if (cat === "IT") filters.industry = "IT & Technology";
+      else if (cat === "Management") filters.category = "Management";
+      else if (cat === "Internships") filters.category = "Internships";
+      document.getElementById("fScope").value = filters.scope;
+      document.getElementById("fIndustry").value = filters.industry;
+      render();
+    });
+  });
+});
+</script>
+</body>
+</html>
+=== job-detail.html ===
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Job Opportunity | ARK Global Konnect</title>
+<meta name="description" content="View full job details and apply through ARK Global Konnect.">
+<meta property="og:title" content="Job Opportunity | ARK Global Konnect">
+<meta property="og:description" content="View full job details and apply through ARK Global Konnect.">
+<link rel="canonical" href="https://arkglobalkonnect.com/job-detail.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+<div id="jobRoot"></div>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/jobs.js"></script>
+<script src="js/forms.js"></script>
+<script src="js/job-detail.js"></script>
+</body>
+</html>
+=== thank-you.html ===
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Application Received | ARK Global Konnect</title>
+<meta name="description" content="Thank you for applying through ARK Global Konnect. Our recruitment team will review your profile.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+<section class="section" style="padding-top:calc(var(--header-h) + 80px)">
+  <div class="container max-820">
+    <div class="success-card reveal">
+      <div class="sc-icon" id="tyIcon"></div>
+      <h3>Application Received.</h3>
+      <p>Thank you for applying through ARK Global Konnect. Our recruitment team will review your profile and contact you if your experience matches the opportunity.</p>
+      <div class="success-actions">
+        <a href="jobs.html" class="btn btn-primary">Explore More Jobs</a>
+        <a href="index.html" class="btn btn-outline">Back to Home</a>
+      </div>
+    </div>
+    <div class="alert alert-info mt-3 reveal">Please note: ARK Global Konnect never charges candidates for placement. If anyone requests payment on our behalf, report it via our Recruitment Fraud Alert.</div>
+  </div>
+</section>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script>document.addEventListener("DOMContentLoaded",function(){document.getElementById("tyIcon").innerHTML=window.ARK_ICONS.checkCircle;});</script>
+</body>
+</html>

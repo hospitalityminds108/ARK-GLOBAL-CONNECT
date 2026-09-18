@@ -1,0 +1,51 @@
+  function buildHeader() {
+    var page = currentPage();
+    var navHtml = NAV.map(function (n) {
+      var active = n.href === page ? " active" : "";
+      return '<a href="' + n.href + '" class="' + active.trim() + '">' + n.label + "</a>";
+    }).join("");
+
+    var header = document.createElement("header");
+    header.className = "site-header";
+    header.id = "siteHeader";
+    header.innerHTML =
+      '<div class="container header-inner">' +
+        '<a href="index.html" class="logo" aria-label="ARK Global Konnect home">' +
+          '<span class="logo-mark">ARK</span>' +
+          '<span class="logo-text"><b>ARK Global Konnect</b><span>Hire · Manage · Mobilise</span></span>' +
+        "</a>" +
+        '<nav class="nav" aria-label="Primary">' + navHtml + "</nav>" +
+...
+  function buildFooter() {
+    var footer = document.createElement("footer");
+    footer.className = "site-footer";
+    footer.innerHTML =
+      '<div class="container">' +
+        '<div class="footer-top">' +
+          '<div class="footer-brand">' +
+            '<a href="index.html" class="logo"><span class="logo-mark">ARK</span>' +
+              '<span class="logo-text"><b>ARK Global Konnect</b><span>Hire · Manage · Mobilise</span></span></a>' +
+            '<p class="footer-tagline">Hire. Manage. Mobilise. Globally.</p>' +
+            '<p>Workforce. HR. Global Mobility. One Partner. From finding the right talent to managing your workforce and moving people across borders, ARK Global Konnect helps businesses build stronger teams.</p>' +
+            '<div class="footer-social">' +
+              '<a href="' + CFG.SOCIAL.linkedin + '" target="_blank" rel="noopener" aria-label="LinkedIn">' + ICONS.linkedin + "</a>" +
+              '<a href="' + CFG.SOCIAL.instagram + '" target="_blank" rel="noopener" aria-label="Instagram">' + ICONS.instagram + "</a>" +
+              '<a href="' + CFG.SOCIAL.facebook + '" target="_blank" rel="noopener" aria-label="Facebook">' + ICONS.facebook + "</a>" +
+              '<a href="' + CFG.SOCIAL.youtube + '" target="_blank" rel="noopener" aria-label="YouTube">' + ICONS.youtube + "</a>" +
+            "</div>" +
+          "</div>" +
+          '<div class="footer-col"><h4>Employers</h4>' +
+...
+  function buildFloating() {
+    var wa = "https://wa.me/" + CFG.WHATSAPP_NUMBER + "?text=" + encodeURIComponent("Hello ARK Global Konnect, I would like to know more about your services.");
+    var wrap = document.createElement("div");
+    wrap.className = "float-actions";
+    wrap.innerHTML =
+      '<a class="float-btn float-call" href="tel:' + CFG.PHONE_TEL + '" data-tip="Call ARK" aria-label="Call ARK Global Konnect">' + ICONS.phone + "</a>" +
+      '<a class="float-btn float-wa" href="' + wa + '" target="_blank" rel="noopener" data-tip="Chat on WhatsApp" aria-label="Chat on WhatsApp">' + ICONS.whatsapp + "</a>";
+    document.body.appendChild(wrap);
+  }
+
+  /* ---------- Scroll reveal ---------- */
+  function initReveal() {
+    var els = document.querySelectorAll(".reveal");

@@ -1,0 +1,69 @@
+    normalize: function (j) {
+      j = j || {};
+      return {
+        id: j.id || "job-" + Math.random().toString(36).slice(2, 8),
+        referenceId: j.referenceId || "",
+        title: j.title || "Untitled Role",
+        company: j.company || "ARK Client",
+        department: j.department || "",
+        industry: j.industry || "",
+        category: j.category || "",
+        location: j.location || j.city || "",
+        city: j.city || j.location || "",
+        country: j.country || "India",
+        scope: j.scope || (j.country && j.country !== "India" ? "International" : "Domestic"),
+        type: j.type || "Permanent",
+        jobType: j.jobType || "Full Time",
+        experience: j.experience || "",
+        salary: j.salary || "",
+        description: j.description || "",
+        responsibilities: j.responsibilities || [],
+        requirements: j.requirements || [],
+        skills: j.skills || [],
+        education: j.education || "",
+        certifications: j.certifications || "",
+        languages: j.languages || "",
+        benefits: j.benefits || [],
+        accommodation: j.accommodation || "",
+        food: j.food || "",
+        transportation: j.transportation || "",
+        visa: j.visa || "",
+        employerDescription: j.employerDescription || "",
+        contact: j.contact || CFG.COMPANY_EMAIL,
+        postedDate: j.postedDate || new Date().toISOString().slice(0, 10),
+        deadline: j.deadline || "",
+        status: (j.status || "active").toLowerCase(),
+        featured: !!j.featured,
+        urgent: !!j.urgent,
+        new: !!j.new
+      };
+    },
+
+    all: function () { return this._jobs || []; },
+    active: function () { return this.all().filter(function (j) { return j.status === "active"; }); },
+    get: function (id) { return this.all().find(function (j) { return j.id === id; }); },
+    save: function (jobs) {
+      this._jobs = jobs;
+      try { localStorage.setItem(K.JOBS, JSON.stringify(jobs)); } catch (e) {}
+    }
+  };
+  window.ARKStore = Store;
+
+  /* ---------- Card rendering ---------- */
+  function badgeHtml(j) {
+    var b = [];
+    if (j.scope === "International") b.push('<span class="badge badge-international">International</span>');
+    else b.push('<span class="badge badge-domestic">Domestic</span>');
+    if (j.featured) b.push('<span class="badge badge-featured">Featured</span>');
+    if (j.urgent) b.push('<span class="badge badge-urgent">Urgent</span>');
+    if (j.new) b.push('<span class="badge badge-new">New</span>');
+    return b.join("");
+  }
+
+  function jobCardHtml(j) {
+    var e = window.ARK.escapeHtml;
+    var url = "job-detail.html?id=" + encodeURIComponent(j.id);
+    var extra = "";
+    if (j.scope === "International" && j.accommodation && j.accommodation !== "Not applicable") {
+      extra = '<span>' + ICONS.home + "Accommodation: " + e(j.accommodation) + "</span>";
+    }

@@ -1,0 +1,15 @@
+<section class="section-sm clients-section">
+  <div class="container">
+    <div class="text-center mb-3 reveal">
+      <span class="eyebrow center">Trusted By</span>
+      <h2 class="h2">Brands That Build With ARK.</h2>
+      <p class="lead max-720 mx-auto">From hospitality groups to technology firms, growing organisations across India and international markets rely on ARK Global Konnect for their people.</p>
+    </div>
+  </div>
+  <div class="client-roller" aria-label="Our clients">
+    <div class="client-roll-track" id="clientRollA"></div>
+  </div>
+  <div class="client-roller reverse mt-2" aria-label="Our clients continued">
+    <div class="client-roll-track" id="clientRollB"></div>
+  </div>
+</section>

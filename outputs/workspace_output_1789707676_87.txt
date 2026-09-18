@@ -1,0 +1,2 @@
+content bbox: (87, 122, 1003, 960) of (1080, 1080)
+cropped size: (916, 838)

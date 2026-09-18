@@ -1,0 +1,4 @@
+Title: ARK Global Konnect | Hire. Manage. Mobilise. Globally.
+Errors: Console Errors (1):
+Title: Find Your Next Opportunity | Jobs at ARK Global Konnect
+Result: JS result: 16 cards on deployed jobs page

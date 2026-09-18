@@ -1,0 +1,255 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Panel | ARK Global Connect</title>
+<meta name="description" content="ARK Global Connect admin panel for managing jobs and applications.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body class="admin-body">
+
+<!-- ============ LOGIN SCREEN ============ -->
+<div id="loginScreen" class="login-wrap">
+  <div class="login-card">
+    <a href="index.html" class="logo" aria-label="ARK Global Connect home">
+      <img src="assets/logo.png" class="logo-img" alt="ARK Global Connect" width="54" height="54">
+    </a>
+    <h1>Admin Panel</h1>
+    <p class="sub">Sign in to manage jobs and applications.</p>
+    <form id="loginForm" novalidate>
+      <div class="field">
+        <label for="adminId">Admin ID</label>
+        <input type="text" id="adminId" name="adminId" autocomplete="username" placeholder="Enter admin ID" required>
+      </div>
+      <div class="field">
+        <label for="adminPassword">Password</label>
+        <input type="password" id="adminPassword" name="adminPassword" autocomplete="current-password" placeholder="Enter password" required>
+      </div>
+      <span class="error-msg" id="loginError"></span>
+      <button type="submit" class="btn btn-primary btn-block mt-2">Sign In</button>
+    </form>
+    <div class="alert alert-info mt-3" style="font-size:0.82rem">
+      <span><b>Admin credentials:</b> Admin ID <code>admin</code> · Password <code>ARK@2026</code>. Change these in <code>js/config.js</code>. This is a frontend-only interface — not secure for production data.</span>
+    </div>
+    <p class="text-center mt-3"><a href="index.html" class="small muted">← Back to website</a></p>
+  </div>
+</div>
+
+<!-- ============ ADMIN APP ============ -->
+<div id="adminApp" class="hidden">
+  <div class="admin-shell">
+
+    <!-- Sidebar -->
+    <aside class="admin-sidebar">
+      <a href="index.html" class="logo" aria-label="ARK Global Connect home">
+        <img src="assets/logo.png" class="logo-img" alt="ARK Global Connect" width="54" height="54">
+      </a>
+      <nav class="admin-nav" aria-label="Admin">
+        <a href="#" data-view="dashboard"><span data-icon="grid"></span>Dashboard</a>
+        <a href="#" data-view="jobs"><span data-icon="briefcase"></span>Manage Jobs</a>
+        <a href="#" data-view="add"><span data-icon="plus"></span>Add Job</a>
+        <a href="#" data-view="applications"><span data-icon="inbox"></span>Applications</a>
+        <a href="#" data-view="settings"><span data-icon="settings"></span>Settings</a>
+        <a href="#" id="logoutBtn"><span data-icon="logout"></span>Logout</a>
+      </nav>
+    </aside>
+
+    <!-- Main -->
+    <main class="admin-main">
+      <div class="admin-topbar">
+        <div style="display:flex;align-items:center;gap:14px">
+          <button id="adminMenuToggle" class="icon-btn" aria-label="Toggle menu" style="display:none"><span data-icon="menu"></span></button>
+          <h1>Admin Console</h1>
+        </div>
+        <a href="index.html" class="btn btn-ghost btn-sm" target="_blank" rel="noopener">View Website</a>
+      </div>
+
+      <!-- DASHBOARD -->
+      <section id="view-dashboard">
+        <div class="admin-cards" id="dashCards"></div>
+        <div class="admin-panel">
+          <h2>Recent Jobs</h2>
+          <div class="admin-table-wrap">
+            <table class="admin-table">
+              <thead><tr><th>Role</th><th>Location</th><th>Scope</th><th>Status</th><th>Posted</th></tr></thead>
+              <tbody id="recentJobs"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- MANAGE JOBS -->
+      <section id="view-jobs" class="hidden">
+        <div class="admin-panel">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:20px">
+            <h2 style="margin:0">Manage Jobs</h2>
+            <div style="display:flex;gap:10px;flex-wrap:wrap">
+              <input type="search" id="jobSearch" class="input" placeholder="Search jobs…" style="min-width:220px">
+              <button class="btn btn-primary btn-sm" onclick="ARKAdmin.showView('add')">+ Add Job</button>
+            </div>
+          </div>
+          <div class="admin-table-wrap">
+            <table class="admin-table">
+              <thead>
+                <tr><th>Role</th><th>Location</th><th>Country</th><th>Type</th><th>Scope</th><th>Posted</th><th>Deadline</th><th>Status</th><th>Apps</th><th>Actions</th></tr>
+              </thead>
+              <tbody id="jobsTbody"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ADD / EDIT JOB -->
+      <section id="view-add" class="hidden">
+        <div class="admin-panel">
+          <h2 id="jobFormTitle">Add New Job</h2>
+          <form id="jobForm" novalidate>
+            <input type="hidden" id="jobId" name="id">
+            <div class="grid g2" style="gap:18px">
+              <div class="field"><label>Job Title *</label><input type="text" name="title" placeholder="e.g. Senior Sous Chef" required></div>
+              <div class="field"><label>Company / Client</label><input type="text" name="company" placeholder="Client name"></div>
+              <div class="field"><label>Reference ID</label><input type="text" name="referenceId" placeholder="Auto-generated if blank"></div>
+              <div class="field"><label>Department</label><input type="text" name="department" placeholder="e.g. Operations"></div>
+              <div class="field"><label>Industry</label><input type="text" name="industry" placeholder="e.g. Hospitality & Tourism"></div>
+              <div class="field"><label>Category</label><input type="text" name="category" placeholder="e.g. Culinary"></div>
+              <div class="field"><label>City</label><input type="text" name="city" placeholder="e.g. Dubai"></div>
+              <div class="field"><label>Country</label><input type="text" name="country" placeholder="e.g. United Arab Emirates"></div>
+              <div class="field"><label>Location (display)</label><input type="text" name="location" placeholder="e.g. Dubai, UAE"></div>
+              <div class="field"><label>Scope</label>
+                <select name="scope"><option value="">Auto</option><option>Domestic</option><option>International</option></select>
+              </div>
+              <div class="field"><label>Employment Type</label>
+                <select name="type"><option>Permanent</option><option>Contract</option><option>Temporary</option><option>Internship</option><option>Part Time</option></select>
+              </div>
+              <div class="field"><label>Job Type</label>
+                <select name="jobType"><option>Full Time</option><option>Part Time</option><option>Contract</option><option>Internship</option></select>
+              </div>
+              <div class="field"><label>Experience</label><input type="text" name="experience" placeholder="e.g. 3–5 years"></div>
+              <div class="field"><label>Salary</label><input type="text" name="salary" placeholder="e.g. AED 8,000–10,000 / month"></div>
+              <div class="field"><label>Education</label><input type="text" name="education" placeholder="e.g. Bachelor's degree"></div>
+              <div class="field"><label>Certifications</label><input type="text" name="certifications" placeholder="e.g. HACCP"></div>
+              <div class="field"><label>Languages</label><input type="text" name="languages" placeholder="e.g. English, Arabic"></div>
+              <div class="field"><label>Accommodation</label><input type="text" name="accommodation" placeholder="e.g. Provided"></div>
+              <div class="field"><label>Food</label><input type="text" name="food" placeholder="e.g. Allowance provided"></div>
+              <div class="field"><label>Transportation</label><input type="text" name="transportation" placeholder="e.g. Provided"></div>
+              <div class="field"><label>Visa</label><input type="text" name="visa" placeholder="e.g. Employment visa sponsored"></div>
+              <div class="field"><label>Posted Date</label><input type="date" name="postedDate"></div>
+              <div class="field"><label>Deadline</label><input type="date" name="deadline"></div>
+              <div class="field"><label>Status</label>
+                <select name="status"><option value="active">Active</option><option value="draft">Draft</option><option value="closed">Closed</option></select>
+              </div>
+              <div class="field"><label>Contact Email</label><input type="email" name="contact" placeholder="arkglobalhm@gmail.com"></div>
+            </div>
+
+            <div class="field mt-2"><label>Short Description</label><textarea name="description" rows="3" placeholder="A concise summary of the role."></textarea></div>
+            <div class="field"><label>Employer Description</label><textarea name="employerDescription" rows="3" placeholder="About the client / employer."></textarea></div>
+
+            <div class="grid g2" style="gap:18px">
+              <div class="field"><label>Responsibilities (one per line)</label><textarea name="responsibilities" rows="5" placeholder="Manage daily operations&#10;Lead a team of 10"></textarea></div>
+              <div class="field"><label>Requirements (one per line)</label><textarea name="requirements" rows="5" placeholder="5+ years experience&#10;Relevant degree"></textarea></div>
+              <div class="field"><label>Skills (one per line)</label><textarea name="skills" rows="4" placeholder="Leadership&#10;Menu planning"></textarea></div>
+              <div class="field"><label>Benefits (one per line)</label><textarea name="benefits" rows="4" placeholder="Health insurance&#10;Annual leave"></textarea></div>
+            </div>
+
+            <div class="field mt-2" style="display:flex;gap:26px;flex-wrap:wrap">
+              <label style="display:flex;align-items:center;gap:8px;font-weight:500"><input type="checkbox" name="featured"> Featured</label>
+              <label style="display:flex;align-items:center;gap:8px;font-weight:500"><input type="checkbox" name="urgent"> Urgent</label>
+              <label style="display:flex;align-items:center;gap:8px;font-weight:500"><input type="checkbox" name="new"> Mark as New</label>
+            </div>
+
+            <div style="display:flex;gap:12px;margin-top:24px;flex-wrap:wrap">
+              <button type="submit" id="jobFormSubmit" class="btn btn-primary">Publish Job</button>
+              <button type="button" class="btn btn-ghost" onclick="ARKAdmin.resetJobForm()">Clear</button>
+              <button type="button" class="btn btn-ghost" onclick="ARKAdmin.showView('jobs')">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- APPLICATIONS -->
+      <section id="view-applications" class="hidden">
+        <div class="admin-panel">
+          <h2>Applications</h2>
+          <div class="admin-table-wrap">
+            <table class="admin-table">
+              <thead><tr><th>Candidate</th><th>Role</th><th>Location</th><th>Experience</th><th>Applied</th><th>Status</th><th></th></tr></thead>
+              <tbody id="appsTbody"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- SETTINGS -->
+      <section id="view-settings" class="hidden">
+        <div class="admin-panel">
+          <h2>Settings &amp; Data</h2>
+          <div id="settingsInfo"></div>
+          <div class="grid g2" style="gap:18px;margin-top:10px">
+            <div class="admin-panel" style="margin:0">
+              <h2 style="font-size:1.05rem">Export &amp; Backup</h2>
+              <p class="small muted">Download your jobs or a full backup (jobs + applications) as JSON.</p>
+              <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
+                <button id="exportJobsBtn" class="btn btn-primary btn-sm">Export Jobs (JSON)</button>
+                <button id="backupBtn" class="btn btn-ghost btn-sm">Download Full Backup</button>
+              </div>
+            </div>
+            <div class="admin-panel" style="margin:0">
+              <h2 style="font-size:1.05rem">Import &amp; Restore</h2>
+              <p class="small muted">Import a jobs JSON file or restore a full backup.</p>
+              <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
+                <label class="btn btn-ghost btn-sm" style="cursor:pointer">Import Jobs<input type="file" id="importInput" accept="application/json,.json" hidden></label>
+                <label class="btn btn-ghost btn-sm" style="cursor:pointer">Restore Backup<input type="file" id="restoreInput" accept="application/json,.json" hidden></label>
+              </div>
+            </div>
+          </div>
+          <div class="admin-panel" style="margin-top:18px;border-color:rgba(200,76,84,0.3)">
+            <h2 style="font-size:1.05rem">Danger Zone</h2>
+            <p class="small muted">Reset all local changes and reload the original jobs from <code>data/jobs.json</code>.</p>
+            <button id="resetBtn" class="btn btn-sm" style="background:var(--red);color:#fff;margin-top:14px">Reset Data</button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</div>
+
+<!-- ============ CONFIRM MODAL ============ -->
+<div class="modal-overlay" id="confirmModal">
+  <div class="modal">
+    <h3 id="cmTitle">Are you sure?</h3>
+    <p id="cmMsg"></p>
+    <div class="modal-actions">
+      <button class="btn btn-ghost" id="cmNo">Cancel</button>
+      <button class="btn btn-primary" id="cmYes">Confirm</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/jobs.js"></script>
+<script src="js/admin.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll("[data-icon]").forEach(function (el) {
+    var k = el.getAttribute("data-icon"); if (window.ARK_ICONS[k]) el.innerHTML = window.ARK_ICONS[k];
+  });
+  // show mobile menu toggle only on small screens
+  function syncToggle() {
+    var t = document.getElementById("adminMenuToggle");
+    if (t) t.style.display = window.innerWidth <= 1024 ? "inline-grid" : "none";
+  }
+  syncToggle();
+  window.addEventListener("resize", syncToggle);
+});
+</script>
+</body>
+</html>

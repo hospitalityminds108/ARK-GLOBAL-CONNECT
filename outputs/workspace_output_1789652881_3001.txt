@@ -1,0 +1,21 @@
+65:  var NAV = [
+66:    { label: "Home", href: "index.html" },
+67:    { label: "Services", children: [
+68:      { label: "Hire Talent", href: "hire-talent.html" },
+69:      { label: "Permanent Recruitment", href: "permanent-recruitment.html" },
+70:      { label: "Executive Search", href: "executive-search.html" },
+71:      { label: "Staffing Solutions", href: "staffing.html" },
+72:      { label: "RPO", href: "rpo.html" },
+73:      { label: "Remote HR", href: "remote-hr.html" },
+74:      { label: "Global Recruitment", href: "global-recruitment.html" },
+75:      { label: "Global Mobility", href: "global-mobility.html" },
+76:      { label: "Internships", href: "internships.html" }
+78:    { label: "Industries", href: "industries.html" },
+79:    { label: "Global Reach", href: "global-reach.html" },
+80:    { label: "For Candidates", href: "candidates.html" },
+81:    { label: "I Want to Hire", href: "hire.html" },
+82:    { label: "About", href: "about.html" },
+83:    { label: "Insights", href: "insights.html" },
+84:    { label: "Contact", href: "contact.html" }
+124:          '<a href="hire.html" class="btn btn-outline btn-sm">I Want to Hire</a>' +
+151:        '<a href="hire.html" class="btn btn-primary btn-block">I Want to Hire</a>' +

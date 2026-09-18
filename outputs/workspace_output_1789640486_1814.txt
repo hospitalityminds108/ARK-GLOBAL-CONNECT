@@ -1,0 +1,2 @@
+Result: JS result: 1584
+Result: JS result: nav toggle exists: true | body scrollWidth: 1584 vs viewport 1599

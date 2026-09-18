@@ -1,0 +1,11 @@
+=== index.html status ===
+200
+=== hire.html status ===
+200
+=== hire.js status ===
+200
+=== style.css status ===
+200
+=== demo check on live hire.html ===
+=== hire page title ===
+<title>I Want to Hire | Build Your Staffing Requirement | ARK Global Connect</title>

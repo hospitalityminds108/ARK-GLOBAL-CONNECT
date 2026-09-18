@@ -1,0 +1,70 @@
+===ABOUT===
+<section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>About ARK</span></nav>
+    <span class="eyebrow">Who We Are</span>
+    <h1 class="h1">Workforce. HR. Global Mobility.<br>One Partner.</h1>
+    <p class="lead max-720">ARK Global Konnect exists for one reason: to help businesses build stronger teams. We bring together recruitment, HR and global mobility under a single partner, so growing organisations can focus on their business instead of the complexity of people.</p>
+  </div>
+</section>
+
+<section class="section bg-ivory">
+  <div class="container">
+    <div class="split">
+      <div class="reveal">
+        <span class="eyebrow">Our Story</span>
+        <h2 class="h2">Built to Solve a Real Problem.</h2>
+        <p class="lead mt-2">Businesses were being asked to juggle recruitment agencies, HR consultants and immigration specialists — each with their own process, their own fees and their own gaps.</p>
+        <p class="muted">ARK Global Konnect was created to close those gaps. We combine the three disciplines that every growing business needs — finding people, managing people and moving people — into one joined-up service. One partner, one point of contact, one standard of care.</p>
+        <p class="muted">Today we support organisations across India and international markets, from single critical hires to complete workforce solutions. Our promise is simple: we help businesses build stronger teams, and we do it with honesty, expertise and genuine care for the people involved.</p>
+      </div>
+      <div class="split-media reveal reveal-delay-2">
+        <div class="curved-img" style="aspect-ratio:4/5">
+          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80" alt="Diverse professional team collaborating" loading="lazy" style="width:100%;height:100%;object-fit:cover">
+        </div>
+        <div class="media-badge"><b>One Partner</b><span>Workforce · HR · Mobility</span></div>
+      </div>
+    </div>
+
+    <div class="story-gallery reveal">
+      <figure>
+        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80" alt="ARK consultants collaborating with a client team" loading="lazy">
+        <figcaption>Listening first — understanding the business before the brief.</figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=900&q=80" alt="Business leaders planning workforce growth" loading="lazy">
+        <figcaption>Building teams that are ready to perform from day one.</figcaption>
+      </figure>
+===INDUSTRIES===
+25:<section class="page-hero">
+<section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>Industries</span></nav>
+    <span class="eyebrow">Sector Expertise</span>
+    <h1 class="h1">Industries We Serve.</h1>
+    <p class="lead max-720">Great hiring is sector-specific. A hospitality hire is not an IT hire. We bring genuine industry knowledge to every search, so we understand the roles, the skills and the people who succeed in them.</p>
+    <div class="hero-actions mt-3">
+      <a href="contact.html" class="btn btn-primary btn-lg">Discuss Your Sector</a>
+      <a href="jobs.html" class="btn btn-outline btn-lg">Browse Jobs</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INDUSTRY MARQUEE ============ -->
+<div class="section-sm bg-dark" style="padding:34px 0">
+  <div class="ind-marquee" aria-hidden="true">
+    <div class="ind-marquee-track" id="indMarquee"></div>
+  </div>
+</div>
+
+<!-- ============ INDUSTRY GRID + FILTER ============ -->
+<section class="section bg-ivory">
+  <div class="container">
+    <div class="text-center mb-4 reveal">
+      <span class="eyebrow center">12+ Sectors</span>
+      <h2 class="h2">Find Your Industry.</h2>
+      <p class="lead max-720 mx-auto">Filter by sector to see where we recruit — and how we can help you hire better.</p>
+    </div>
+    <div class="ind-filter reveal" id="indFilter"></div>
+    <div class="grid g3" id="industryGrid"></div>
+  </div>

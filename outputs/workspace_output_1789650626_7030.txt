@@ -1,0 +1,325 @@
+/* ============================================================
+   ARK GLOBAL KONNECT — forms.js
+   Validation, EmailJS submission, WhatsApp handoff, CV upload.
+   ============================================================ */
+(function () {
+  "use strict";
+  var CFG = window.ARK_CONFIG;
+  var ICONS = window.ARK_ICONS || {};
+  var K = CFG.STORAGE_KEYS;
+
+  /* ---------- Validation helpers ---------- */
+  var RE = {
+    email: /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/,
+    mobile: /^[+]?[\d\s\-()]{7,18}$/
+  };
+
+  function setError(input, msg) {
+    if (!input) return;
+    input.classList.add("invalid");
+    var field = input.closest(".field");
+    var err = field ? field.querySelector(".error-msg") : null;
+    if (err) { err.textContent = msg; err.classList.add("show"); }
+  }
+  function clearError(input) {
+    if (!input) return;
+    input.classList.remove("invalid");
+    var field = input.closest(".field");
+    var err = field ? field.querySelector(".error-msg") : null;
+    if (err) { err.textContent = ""; err.classList.remove("show"); }
+  }
+
+  function validateForm(form) {
+    var ok = true;
+    form.querySelectorAll("input[required], select[required], textarea[required]").forEach(function (input) {
+      clearError(input);
+      var val = (input.value || "").trim();
+      if (input.type === "checkbox") {
+        if (!input.checked) { ok = false; setError(input, "Please confirm to continue."); }
+        return;
+      }
+      if (!val) { ok = false; setError(input, "This field is required."); return; }
+      if (input.type === "email" && !RE.email.test(val)) { ok = false; setError(input, "Enter a valid email address."); return; }
+      if (input.type === "tel" && !RE.mobile.test(val)) { ok = false; setError(input, "Enter a valid mobile number."); return; }
+      if (input.type === "url" && val && !/^https?:\/\//i.test(val)) { ok = false; setError(input, "Enter a valid URL starting with http(s)://"); }
+    });
+    return ok;
+  }
+
+  /* ---------- CV file handling ---------- */
+  function validateFile(file) {
+    if (!file) return { ok: false, msg: "Please upload your CV." };
+    var name = file.name.toLowerCase();
+    var extOk = /\.(pdf|doc|docx)$/.test(name);
+    var typeOk = CFG.ALLOWED_CV_TYPES.indexOf(file.type) !== -1;
+    if (!extOk && !typeOk) return { ok: false, msg: "Only PDF, DOC or DOCX files are allowed." };
+    if (file.size > CFG.MAX_CV_MB * 1024 * 1024) return { ok: false, msg: "File is too large. Maximum " + CFG.MAX_CV_MB + "MB." };
+    return { ok: true };
+  }
+
+  function humanSize(bytes) {
+    if (bytes < 1024) return bytes + " B";
+    if (bytes < 1048576) return (bytes / 1024).toFixed(1) + " KB";
+    return (bytes / 1048576).toFixed(2) + " MB";
+  }
+
+  function initFileDrop(dropId, inputId, selectedId, nameId, removeId, errorId) {
+    var drop = document.getElementById(dropId);
+    var input = document.getElementById(inputId);
+    var selected = document.getElementById(selectedId);
+    var nameEl = document.getElementById(nameId);
+    var remove = document.getElementById(removeId);
+    var errEl = errorId ? document.getElementById(errorId) : null;
+    if (!drop || !input) return null;
+
+    var state = { file: null };
+
+    function show(file) {
+      var v = validateFile(file);
+      if (!v.ok) {
+        if (errEl) { errEl.textContent = v.msg; errEl.classList.add("show"); }
+        state.file = null;
+        selected.classList.remove("show");
+        drop.style.display = "";
+        return;
+      }
+      if (errEl) { errEl.textContent = ""; errEl.classList.remove("show"); }
+      state.file = file;
+      nameEl.textContent = file.name + " · " + humanSize(file.size);
+      selected.classList.add("show");
+      drop.style.display = "none";
+    }
+
+    drop.addEventListener("click", function () { input.click(); });
+    input.addEventListener("change", function () { if (input.files[0]) show(input.files[0]); });
+    ["dragenter", "dragover"].forEach(function (ev) {
+      drop.addEventListener(ev, function (e2) { e2.preventDefault(); drop.classList.add("dragover"); });
+    });
+    ["dragleave", "drop"].forEach(function (ev) {
+      drop.addEventListener(ev, function (e2) { e2.preventDefault(); drop.classList.remove("dragover"); });
+    });
+    drop.addEventListener("drop", function (e2) {
+      if (e2.dataTransfer.files[0]) show(e2.dataTransfer.files[0]);
+    });
+    if (remove) remove.addEventListener("click", function () {
+      state.file = null; input.value = "";
+      selected.classList.remove("show"); drop.style.display = "";
+    });
+    return state;
+  }
+  window.ARK_initFileDrop = initFileDrop;
+
+  /* ---------- EmailJS ---------- */
+  function loadEmailJS() {
+    return new Promise(function (resolve) {
+      if (window.emailjs) { resolve(true); return; }
+      if (!CFG.emailjsReady()) { resolve(false); return; }
+      var s = document.createElement("script");
+      s.src = "https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js";
+      s.onload = function () {
+        try { window.emailjs.init({ publicKey: CFG.EMAILJS_PUBLIC_KEY }); resolve(true); }
+        catch (e) { resolve(false); }
+      };
+      s.onerror = function () { resolve(false); };
+      document.head.appendChild(s);
+    });
+  }
+
+  function sendEmail(payload) {
+    return loadEmailJS().then(function (ready) {
+      if (!ready) return { ok: false, demo: true };
+      return window.emailjs.send(CFG.EMAILJS_SERVICE_ID, CFG.EMAILJS_TEMPLATE_ID, payload)
+        .then(function () { return { ok: true }; })
+        .catch(function () { return { ok: false, demo: false }; });
+    });
+  }
+
+  /* ---------- WhatsApp message builder ---------- */
+  function waUrl(message) {
+    return "https://wa.me/" + CFG.WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message);
+  }
+  window.ARK_waUrl = waUrl;
+
+  /* ---------- Save application locally (demo) ---------- */
+  function saveApplication(app) {
+    var list = [];
+    try { list = JSON.parse(localStorage.getItem(K.APPLICATIONS)) || []; } catch (e) { list = []; }
+    list.unshift(app);
+    try { localStorage.setItem(K.APPLICATIONS, JSON.stringify(list)); } catch (e) {}
+  }
+
+  /* ---------- Job application form ---------- */
+  window.ARK_initApplyForm = function (job) {
+    var form = document.getElementById("applyForm");
+    if (!form) return;
+    var cvState = initFileDrop("cvDrop", "cvInput", "cvSelected", "cvName", "cvRemove", "cvError");
+    var btn = document.getElementById("applyBtn");
+
+    form.addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      var ok = validateForm(form);
+      if (!cvState || !cvState.file) {
+        ok = false;
+        var ce = document.getElementById("cvError");
+        if (ce) { ce.textContent = "Please upload your CV (PDF, DOC or DOCX)."; ce.classList.add("show"); }
+      }
+      if (!ok) { window.ARK.toast("Please correct the highlighted fields.", "error"); return; }
+
+      var data = {};
+      new FormData(form).forEach(function (v, k) { data[k] = v; });
+      var app = {
+        id: "app-" + Date.now(),
+        jobId: job.id,
+        jobTitle: job.title,
+        jobRef: job.referenceId || job.id,
+        name: data.name, email: data.email, mobile: data.mobile,
+        location: data.location, experience: data.experience,
+        company: data.company || "", salary: data.salary || "",
+        notice: data.notice || "", linkedin: data.linkedin || "",
+        cover: data.cover || "",
+        cvName: cvState.file.name, cvSize: humanSize(cvState.file.size),
+        appliedDate: new Date().toISOString().slice(0, 10),
+        status: "New"
+      };
+
+      btn.disabled = true;
+      btn.innerHTML = "Submitting…";
+
+      var payload = {
+        to_email: CFG.COMPANY_EMAIL,
+        subject: "New Job Application – " + job.title + " – " + app.name,
+        job_title: job.title, job_id: job.referenceId || job.id,
+        candidate_name: app.name, candidate_email: app.email, candidate_mobile: app.mobile,
+        location: app.location, experience: app.experience, current_company: app.company,
+        expected_salary: app.salary, notice_period: app.notice, linkedin: app.linkedin,
+        cover_letter: app.cover, cv_filename: app.cvName, cv_size: app.cvSize,
+        message: buildEmailBody(app)
+      };
+
+      sendEmail(payload).then(function (res) {
+        saveApplication(app);
+        showApplySuccess(job, app, res);
+      });
+    });
+  };
+
+  function buildEmailBody(a) {
+    return [
+      "NEW JOB APPLICATION",
+      "Job: " + a.jobTitle,
+      "Job ID: " + a.jobRef,
+      "Candidate: " + a.name,
+      "Email: " + a.email,
+      "Mobile: " + a.mobile,
+      "Location: " + a.location,
+      "Experience: " + a.experience,
+      "Current Company: " + a.company,
+      "Expected Salary: " + a.salary,
+      "Notice Period: " + a.notice,
+      "LinkedIn: " + a.linkedin,
+      "Cover Letter: " + a.cover,
+      "CV: " + a.cvName + " (" + a.cvSize + ")"
+    ].join("\n");
+  }
+
+  function buildWaMessage(a) {
+    return [
+      "NEW JOB APPLICATION",
+      "",
+      "Job: " + a.jobTitle,
+      "Job ID: " + a.jobRef,
+      "Candidate: " + a.name,
+      "Email: " + a.email,
+      "Mobile: " + a.mobile,
+      "Location: " + a.location,
+      "Experience: " + a.experience,
+      "Current Company: " + a.company,
+      "Expected Salary: " + a.salary,
+      "Notice Period: " + a.notice,
+      "LinkedIn: " + a.linkedin,
+      "Cover Letter: " + a.cover,
+      "CV: " + a.cvName + " (" + a.cvSize + ") — please attach this file in WhatsApp"
+    ].join("\n");
+  }
+
+  function showApplySuccess(job, app, res) {
+    var form = document.getElementById("applyForm");
+    var box = document.getElementById("applySuccess");
+    if (!form || !box) return;
+    form.classList.add("hidden");
+    var emailNote = res.ok
+      ? "Your application has been emailed to the ARK recruitment team."
+      : (res.demo
+        ? "Email delivery is in demo mode (EmailJS not configured). Your application has been saved locally and you can send it instantly on WhatsApp below."
+        : "We could not reach the email service right now. Please send your application on WhatsApp below so our team receives it.");
+    box.classList.remove("hidden");
+    box.innerHTML =
+      '<div class="success-card">' +
+        '<div class="sc-icon">' + ICONS.checkCircle + "</div>" +
+        "<h3>Application Submitted Successfully</h3>" +
+        "<p>" + emailNote + "</p>" +
+        '<div class="alert alert-info mb-3" style="text-align:left">' + ICONS.info +
+          "<span><b>Note:</b> For your privacy, the CV file is not uploaded to any server in this frontend-only demo. Please attach your CV when sending on WhatsApp, or reply to our email with the file.</span></div>" +
+        '<div class="success-actions">' +
+          '<a class="btn btn-gold" target="_blank" rel="noopener" href="' + waUrl(buildWaMessage(app)) + '">' + ICONS.whatsapp + " Send Application on WhatsApp</a>" +
+          '<a class="btn btn-outline" href="jobs.html">Back to Jobs</a>' +
+          '<a class="btn btn-outline" href="thank-you.html">Continue</a>' +
+        "</div>" +
+      "</div>";
+    box.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+
+  /* ---------- Generic enquiry / profile forms ---------- */
+  window.ARK_initGenericForm = function (formId, opts) {
+    opts = opts || {};
+    var form = document.getElementById(formId);
+    if (!form) return;
+    var cvState = opts.cv ? initFileDrop(opts.cv.drop, opts.cv.input, opts.cv.selected, opts.cv.name, opts.cv.remove, opts.cv.error) : null;
+    var btn = form.querySelector('button[type="submit"]');
+
+    form.addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      var ok = validateForm(form);
+      if (opts.cv && (!cvState || !cvState.file)) {
+        ok = false;
+        var ce = document.getElementById(opts.cv.error);
+        if (ce) { ce.textContent = "Please upload your CV."; ce.classList.add("show"); }
+      }
+      if (!ok) { window.ARK.toast("Please correct the highlighted fields.", "error"); return; }
+
+      var data = {};
+      new FormData(form).forEach(function (v, k) { data[k] = v; });
+      var subject = (opts.subject || "New Enquiry") + (data.name ? " – " + data.name : "");
+      var body = Object.keys(data).map(function (k) { return k + ": " + data[k]; }).join("\n");
+      if (cvState && cvState.file) body += "\ncv: " + cvState.file.name + " (" + humanSize(cvState.file.size) + ")";
+
+      btn.disabled = true;
+      var original = btn.innerHTML;
+      btn.innerHTML = "Submitting…";
+
+      sendEmail({ to_email: CFG.COMPANY_EMAIL, subject: subject, message: body, name: data.name || "", email: data.email || "" })
+        .then(function (res) {
+          btn.disabled = false;
+          btn.innerHTML = original;
+          var box = document.getElementById(opts.successId || "formSuccess");
+          var note = res.ok ? "Your message has been sent to the ARK team."
+            : (res.demo ? "Email is in demo mode (EmailJS not configured). Your details were captured locally — please also send them on WhatsApp."
+              : "We could not reach the email service. Please send your details on WhatsApp.");
+          if (box) {
+            box.classList.remove("hidden");
+            box.innerHTML = '<div class="alert alert-success">' + ICONS.checkCircle + "<span>" + note + "</span></div>" +
+              '<div class="mt-2"><a class="btn btn-gold" target="_blank" rel="noopener" href="' + waUrl(subject + "\n\n" + body) + '">' + ICONS.whatsapp + " Send on WhatsApp</a></div>";
+            box.scrollIntoView({ behavior: "smooth", block: "center" });
+          }
+          form.reset();
+          if (cvState) { cvState.file = null; var s = document.getElementById(opts.cv.selected); if (s) s.classList.remove("show"); var d = document.getElementById(opts.cv.drop); if (d) d.style.display = ""; }
+          window.ARK.toast("Submitted successfully.", "success");
+        });
+    });
+  };
+
+  /* ---------- Live validation clearing ---------- */
+  document.addEventListener("input", function (ev) {
+    if (ev.target.matches("input, select, textarea")) clearError(ev.target);
+  });
+})();

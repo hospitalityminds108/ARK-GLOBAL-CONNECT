@@ -1,0 +1,5 @@
+index.html             errors=0 GR=True header=True
+about.html             errors=0 GR=True header=True
+industries.html        errors=0 GR=True header=True
+global-reach.html      errors=0 GR=True header=True
+contact.html           errors=0 GR=True header=True

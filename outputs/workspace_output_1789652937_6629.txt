@@ -1,0 +1,3 @@
+NAV TEXT: 'Home\nServices\nIndustries\nGlobal Reach\nFor Candidates\nAbout\nInsights\nContact'
+Contains 'I Want to Hire' in nav menu: False
+Header CTA buttons: 1

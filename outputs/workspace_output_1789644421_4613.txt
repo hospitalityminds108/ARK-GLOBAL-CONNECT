@@ -1,0 +1,156 @@
+===CONTACT===
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact ARK Global Konnect | Hire Talent or Find a Job</title>
+<meta name="description" content="Contact ARK Global Konnect to hire talent, discuss staffing, Remote HR or global mobility, or to find your next job. Reach us by form, email, phone or WhatsApp.">
+<meta name="keywords" content="contact ARK Global Konnect, hire talent, recruitment enquiry, staffing enquiry, HR enquiry, global mobility contact">
+<meta property="og:title" content="Contact ARK Global Konnect">
+<meta property="og:description" content="Let's talk about hiring, HR or global mobility. Reach us by form, email, phone or WhatsApp.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://arkglobalkonnect.com/contact.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ContactPage","name":"Contact ARK Global Konnect","url":"https://arkglobalkonnect.com/contact.html","description":"Contact ARK Global Konnect for hiring, staffing, HR and global mobility enquiries."}
+</script>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+
+<section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>Contact</span></nav>
+    <span class="eyebrow">Get in Touch</span>
+    <h1 class="h1">Let's Talk About<br>Your People.</h1>
+    <p class="lead max-720">Whether you're hiring, growing or going global — or looking for your next role — we'd love to hear from you. Tell us what you need and we'll respond promptly.</p>
+  </div>
+</section>
+
+<section class="section bg-ivory">
+  <div class="container">
+    <div class="grid g2" style="align-items:start;gap:50px">
+      <!-- FORM -->
+      <div class="reveal">
+        <span class="eyebrow">Send a Message</span>
+        <h2 class="h2">How Can We Help?</h2>
+        <p class="muted mt-2">Complete the form and our team will get back to you. For urgent matters, use phone or WhatsApp.</p>
+        <div class="card mt-3" style="padding:36px">
+          <form id="contactForm" novalidate>
+            <div class="form-grid two">
+              <div class="field"><label for="name">Full Name <span class="req">*</span></label><input type="text" id="name" name="name" required placeholder="Your name"><span class="error-msg"></span></div>
+              <div class="field"><label for="email">Email <span class="req">*</span></label><input type="email" id="email" name="email" required placeholder="you@company.com"><span class="error-msg"></span></div>
+              <div class="field"><label for="mobile">Mobile <span class="req">*</span></label><input type="tel" id="mobile" name="mobile" required placeholder="+91 90000 00000"><span class="error-msg"></span></div>
+              <div class="field"><label for="company">Company</label><input type="text" id="company" name="company" placeholder="Your organisation"><span class="error-msg"></span></div>
+            </div>
+            <div class="field mt-2"><label for="interest">I'm Interested In <span class="req">*</span></label>
+              <select id="interest" name="interest" required>
+                <option value="">Select a service…</option>
+                <option>Hire Talent / Permanent Recruitment</option>
+                <option>Executive Search</option>
+                <option>Staffing Solutions</option>
+                <option>RPO</option>
+                <option>Remote HR</option>
+                <option>Global Recruitment</option>
+                <option>Global Mobility</option>
+                <option>Internships</option>
+                <option>I'm a Candidate Looking for a Job</option>
+                <option>Other</option>
+              </select><span class="error-msg"></span>
+            </div>
+            <div class="field mt-2"><label for="message">Message <span class="req">*</span></label><textarea id="message" name="message" required placeholder="Tell us about your requirement or question…"></textarea><span class="error-msg"></span></div>
+            <div class="checkbox-field mt-3">
+              <input type="checkbox" id="consent" name="consent" required>
+              <label for="consent">I consent to ARK Global Konnect contacting me about my enquiry.</label>
+            </div>
+            <span class="error-msg" id="consentError"></span>
+            <button type="submit" class="btn btn-primary btn-lg btn-block mt-3">Send Message</button>
+          </form>
+          <div id="formSuccess" class="hidden mt-3"></div>
+        </div>
+      </div>
+
+      <!-- DETAILS -->
+      <div class="reveal reveal-delay-2">
+        <span class="eyebrow">Contact Details</span>
+        <h2 class="h2">Reach Us Directly.</h2>
+        <div class="card mt-3" style="padding:32px">
+          <div class="flex items-center gap-2 mb-3"><span class="card-icon" style="margin:0;width:48px;height:48px" data-icon="mail"></span><div><b>Email</b><br><a href="mailto:careers@arkglobalkonnect.com" class="link-arrow">careers@arkglobalkonnect.com</a></div></div>
+          <div class="divider" style="margin:22px 0"></div>
+          <div class="flex items-center gap-2 mb-3"><span class="card-icon" style="margin:0;width:48px;height:48px" data-icon="phone"></span><div><b>Phone</b><br><a href="tel:+919000000000" class="link-arrow">+91 90000 00000</a></div></div>
+          <div class="divider" style="margin:22px 0"></div>
+          <div class="flex items-center gap-2 mb-3"><span class="card-icon" style="margin:0;width:48px;height:48px" data-icon="whatsapp"></span><div><b>WhatsApp</b><br><a href="https://wa.me/919000000000" target="_blank" rel="noopener" class="link-arrow">Chat with us</a></div></div>
+          <div class="divider" style="margin:22px 0"></div>
+          <div class="flex items-center gap-2"><span class="card-icon" style="margin:0;width:48px;height:48px" data-icon="mapPin"></span><div><b>Head Office</b><br><span class="muted">India · Serving clients globally</span></div></div>
+        </div>
+
+        <div class="card mt-3" style="background:var(--grad-dark);color:var(--light);border:none;padding:32px">
+          <h3 style="color:var(--light)">Hiring? Start Here.</h3>
+          <p style="color:rgba(255,255,255,0.72)">Tell us the role, the volume and the timeline. We'll come back with an honest plan, cost and delivery date.</p>
+          <a href="hire-talent.html" class="btn btn-gold mt-2">Explore Hiring Services</a>
+        </div>
+
+        <div class="alert alert-info mt-3">ARK Global Konnect never charges candidates for placement. If anyone requests payment on our behalf, please report it immediately.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<section class="section-sm bg-beige">
+  <div class="container">
+    <div class="text-center mb-3 reveal"><span class="eyebrow center">Find Us</span><h2 class="h2">Our Location</h2></div>
+    <div class="map-embed reveal">
+      <iframe title="ARK Global Konnect location" src="https://www.openstreetmap.org/export/embed.html?bbox=72.7%2C18.8%2C73.1%2C19.3&layer=mapnik" loading="lazy" style="border:0;width:100%;height:100%"></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-beige">
+  <div class="container max-820">
+    <div class="text-center mb-3 reveal"><span class="eyebrow center">FAQ</span><h2 class="h2">Contact Questions</h2></div>
+    <div class="faq-item"><button class="faq-q">How quickly will you respond?<span></span></button><div class="faq-a"><p>We aim to respond to all enquiries within one business day. Urgent matters are best handled by phone or WhatsApp.</p></div></div>
+    <div class="faq-item"><button class="faq-q">I'm a candidate — should I use this form?<span></span></button><div class="faq-a"><p>You can, but the fastest route is to submit your CV on our For Candidates page or apply directly to a job. That ensures your profile reaches the right consultant.</p></div></div>
+    <div class="faq-item"><button class="faq-q">Do you charge candidates for placement?<span></span></button><div class="faq-a"><p>Never. ARK Global Konnect is paid by employers. Candidates are never charged for placement, interviews or documentation.</p></div></div>
+    <div class="faq-item"><button class="faq-q">Can we arrange a call or meeting?<span></span></button><div class="faq-a"><p>Absolutely. Mention your preferred times in the message and we'll arrange a call or meeting at your convenience.</p></div></div>
+  </div>
+</section>
+
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/forms.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll("[data-icon]").forEach(function (el) {
+    var k = el.getAttribute("data-icon"); if (window.ARK_ICONS[k]) el.innerHTML = window.ARK_ICONS[k];
+  });
+  window.ARK_initGenericForm("contactForm", { subject: "Website Enquiry", successId: "formSuccess" });
+});
+</script>
+</body>
+</html>
+===FOOTER/NAV in main.js===
+3:   Shared: header/footer injection, nav, reveal, counters,
+65:  var NAV = [
+108:  function buildHeader() {
+205:  function buildFooter() {
+206:    var footer = document.createElement("footer");
+207:    footer.className = "site-footer";
+208:    footer.innerHTML =
+210:        '<div class="footer-top">' +
+211:          '<div class="footer-brand">' +
+214:            '<p class="footer-tagline">Hire. Manage. Mobilise. Globally.</p>' +
+216:            '<div class="footer-social">' +
+223:          '<div class="footer-col"><h4>Employers</h4>' +
+231:          '<div class="footer-col"><h4>Candidates</h4>' +
+237:          '<div class="footer-col"><h4>Company</h4>' +
+244:          '<div class="footer-col"><h4>Legal</h4>' +
+252:        '<div class="footer-bottom">' +
+257:    document.body.appendChild(footer);
+429:      buildHeader();
+430:      buildFooter();

@@ -1,0 +1,8 @@
+shot outputs/shot_clients.png
+shot outputs/shot_gr.png
+shot outputs/shot_ind.png
+shot outputs/shot_leader.png
+shot outputs/shot_aboutclients.png
+shot outputs/shot_story.png
+shot outputs/shot_grpage.png
+shot outputs/shot_contact.png

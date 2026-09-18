@@ -1,0 +1,63 @@
+36:<section class="hero">
+37:  <div class="hero-bg">
+40:  <svg class="hero-globe" viewBox="0 0 600 600" fill="none" aria-hidden="true">
+54:    <div class="hero-content">
+58:      <div class="hero-actions reveal reveal-delay-3">
+62:      <div class="hero-secondary reveal reveal-delay-3">
+66:      <div class="hero-stats reveal reveal-delay-4">
+67:        <div class="hero-stat"><b data-count="12" data-suffix="+">0</b><span>Industries Served</span></div>
+68:        <div class="hero-stat"><b data-count="10" data-suffix="+">0</b><span>Countries Reached</span></div>
+69:        <div class="hero-stat"><b data-count="98" data-suffix="%">0</b><span>Client Retention</span></div>
+===HERO CSS===
+250:.hero {
+255:.hero-bg { position: absolute; inset: 0; z-index: 0; }
+256:.hero-bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.32; }
+257:.hero-bg::after {
+261:.hero-globe { position: absolute; right: -6%; top: 50%; transform: translateY(-50%); width: 46vw; max-width: 720px; opacity: 0.5; z-index: 1; pointer-events: none; }
+262:.hero .container { position: relative; z-index: 2; }
+263:.hero-content { max-width: 760px; }
+264:.hero h1 { color: var(--light); margin-bottom: 26px; }
+265:.hero h1 .accent { font-style: italic; color: var(--gold); }
+266:.hero .lead { color: rgba(255,255,255,0.82); max-width: 620px; }
+===ROOT VARS===
+:root {
+  /* Brand palette */
+  --primary-blue: #2E7BA3;   /* premium sky blue — primary CTA */
+  --primary-coral: #C84C54;  /* links / hover / errors */
+  --primary-green: #6BA928;  /* success / accents */
+  --accent-gold: #D4AF37;    /* secondary CTA / accents */
+  --dark-navy: #1A3A52;      /* hero / dark sections */
+  --charcoal: #2C2C2C;       /* headlines + body */
+  --cream: #F8F6F1;          /* page background */
+  --light-gray: #E8E8E8;     /* borders */
+  --sage-green: #B5C99F;
+  --burgundy: #6B2C38;
+
+  /* Semantic aliases (kept for existing rules) */
+  --ivory: #F8F6F1;
+  --beige: #F1EDE4;
+  --stone: #E8E8E8;
+  --taupe: #D8D8D8;
+  --sky: #2E7BA3;
+  --green: #6BA928;
+  --red: #C84C54;
+  --brown: #6B6B6B;
+  --gold: #D4AF37;
+  --text: #2C2C2C;
+  --text-2: #5A5A5A;
+  --text-3: #8A8A8A;
+  --light: #FFFFFF;
+  --deep-green: #1A3A52;
+  --ink: #2C2C2C;
+  --sage: #B5C99F;
+
+  /* Gradients */
+  --grad-sky: linear-gradient(135deg, #EAF3F8 0%, #F6FAFC 100%);
+  --grad-cream: linear-gradient(135deg, #F8F6F1 0%, #F1EDE2 100%);
+  --grad-green: linear-gradient(135deg, #EDF6E6 0%, #F7FBF3 100%);
+  --grad-dark: linear-gradient(150deg, #1A3A52 0%, #14304A 60%, #2C2C2C 100%);
+  --grad-gold: linear-gradient(120deg, #D4AF37 0%, #E6C766 50%, #B8952A 100%);
+
+  /* Type */
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;

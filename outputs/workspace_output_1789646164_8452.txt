@@ -1,0 +1,6 @@
+about.html -> hero-media blocks: 1
+industries.html -> hero-media blocks: 1
+global-reach.html -> hero-media blocks: 1
+contact.html -> hero-media blocks: 1
+hire-talent.html -> hero-media blocks: 1
+jobs-international.html -> hero-media blocks: 1

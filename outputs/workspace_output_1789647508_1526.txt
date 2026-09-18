@@ -1,0 +1,79 @@
+/* ============================================================
+   ARK GLOBAL KONNECT — clients.js
+   Client logo set (inline SVG monogram wordmarks) + helpers.
+   Used by the homepage roller slide and the About page
+   "Our Clients" section.
+   ============================================================ */
+(function () {
+  "use strict";
+
+  /* Each client: name, sector, monogram, accent colour */
+  var CLIENTS = [
+    { name: "Meridian Hotels", sector: "Hospitality", mono: "MH", color: "#2E7BA3" },
+    { name: "NovaTech Systems", sector: "Technology", mono: "NT", color: "#6BA928" },
+    { name: "Gulf Star Retail", sector: "Retail", mono: "GS", color: "#C84C54" },
+    { name: "Apex Financial", sector: "BFSI", mono: "AF", color: "#D4AF37" },
+    { name: "Skyline Developers", sector: "Real Estate", mono: "SD", color: "#1A3A52" },
+    { name: "CareWell Health", sector: "Healthcare", mono: "CW", color: "#2E7BA3" },
+    { name: "TransGlobal Logistics", sector: "Logistics", mono: "TG", color: "#6BA928" },
+    { name: "Vertex Manufacturing", sector: "Manufacturing", mono: "VM", color: "#C84C54" },
+    { name: "BrightPath Education", sector: "Education", mono: "BP", color: "#D4AF37" },
+    { name: "Pulse Media Group", sector: "Marketing", mono: "PM", color: "#1A3A52" },
+    { name: "CoreHR Partners", sector: "Human Resources", mono: "CH", color: "#2E7BA3" },
+    { name: "Emerald Facilities", sector: "Facilities", mono: "EF", color: "#6BA928" }
+  ];
+
+  /* Build a single logo mark (SVG monogram) */
+  function logoMark(c, size) {
+    var s = size || 46;
+    return (
+      '<span class="client-logo-mark" style="--cl:' + c.color + ';width:' + s + "px;height:" + s + 'px">' +
+        '<svg viewBox="0 0 48 48" aria-hidden="true">' +
+          '<rect x="1.5" y="1.5" width="45" height="45" rx="13" fill="none" stroke="currentColor" stroke-width="2.4"/>' +
+          '<text x="24" y="31" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-size="18" font-weight="700" fill="currentColor">' + c.mono + "</text>" +
+        "</svg>" +
+      "</span>"
+    );
+  }
+
+  /* Full logo tile: mark + wordmark + sector */
+  function logoTile(c) {
+    return (
+      '<div class="client-tile" title="' + c.name + '">' +
+        logoMark(c) +
+        '<span class="client-tile-text"><b>' + c.name + "</b><span>" + c.sector + "</span></span>" +
+      "</div>"
+    );
+  }
+
+  /* Compact logo for the marquee roller (mark + name inline) */
+  function logoRoll(c) {
+    return (
+      '<div class="client-roll-item">' +
+        logoMark(c, 40) +
+        '<span class="client-roll-name">' + c.name + "</span>" +
+      "</div>"
+    );
+  }
+
+  window.ARK_CLIENTS = CLIENTS;
+  window.ARK_clientLogoMark = logoMark;
+  window.ARK_clientTile = logoTile;
+  window.ARK_clientRoll = logoRoll;
+
+  /* Auto-render any placeholders present on the page */
+  function autoRender() {
+    var rollHtml = CLIENTS.map(logoRoll).join("");
+    ["clientRollA", "clientRollB"].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el && !el.innerHTML.trim()) el.innerHTML = rollHtml + rollHtml;
+    });
+    var grid = document.getElementById("clientGrid");
+    if (grid && !grid.innerHTML.trim()) grid.innerHTML = CLIENTS.map(logoTile).join("");
+  }
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", autoRender);
+  } else {
+    autoRender();
+  }
+})();

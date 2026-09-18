@@ -1,0 +1,176 @@
+
+  /* ---------- Scroll reveal ---------- */
+  function initReveal() {
+    var els = document.querySelectorAll(".reveal");
+    if (!("IntersectionObserver" in window)) {
+      els.forEach(function (e) { e.classList.add("in"); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) {
+          en.target.classList.add("in");
+          io.unobserve(en.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+
+    function observeAll() {
+      document.querySelectorAll(".reveal:not(.in)").forEach(function (e) {
+        if (!e.__arkObserved) { e.__arkObserved = true; io.observe(e); }
+      });
+    }
+    observeAll();
+
+    // Dynamically-injected .reveal elements (rendered after boot) must also be
+    // observed, otherwise they stay at opacity:0 and sections look empty.
+    if ("MutationObserver" in window) {
+      var mo = new MutationObserver(function () { observeAll(); });
+      mo.observe(document.body, { childList: true, subtree: true });
+    }
+    // Safety net: force-reveal anything still hidden after a short delay.
+    setTimeout(function () {
+      document.querySelectorAll(".reveal:not(.in)").forEach(function (e) {
+        var r = e.getBoundingClientRect();
+        if (r.top < window.innerHeight && r.bottom > 0) e.classList.add("in");
+      });
+    }, 1200);
+  }
+
+  /* ---------- Counters ---------- */
+  function initCounters() {
+    var els = document.querySelectorAll("[data-count]");
+    if (!els.length) return;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        var el = en.target;
+        var target = parseFloat(el.getAttribute("data-count"));
+        var suffix = el.getAttribute("data-suffix") || "";
+        var dur = 1600, start = null;
+        function step(ts) {
+          if (!start) start = ts;
+          var p = Math.min((ts - start) / dur, 1);
+          var eased = 1 - Math.pow(1 - p, 3);
+          var val = target * eased;
+          el.textContent = (target % 1 === 0 ? Math.round(val) : val.toFixed(1)) + suffix;
+          if (p < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+        io.unobserve(el);
+      });
+    }, { threshold: 0.4 });
+    els.forEach(function (e) { io.observe(e); });
+  }
+
+  /* ---------- FAQ accordion ---------- */
+  function initFAQ() {
+    document.querySelectorAll(".faq-item").forEach(function (item) {
+      var q = item.querySelector(".faq-q");
+      var a = item.querySelector(".faq-a");
+      if (!q || !a) return;
+      q.addEventListener("click", function () {
+        var open = item.classList.contains("open");
+        // close siblings in same group
+        var group = item.parentElement;
+        group.querySelectorAll(".faq-item.open").forEach(function (o) {
+          o.classList.remove("open");
+          o.querySelector(".faq-a").style.maxHeight = null;
+        });
+        if (!open) {
+          item.classList.add("open");
+          a.style.maxHeight = a.scrollHeight + "px";
+        }
+      });
+    });
+  }
+
+  /* ---------- Tabs ---------- */
+  function initTabs() {
+    document.querySelectorAll("[data-tabs]").forEach(function (group) {
+      var tabs = group.querySelectorAll(".tab");
+      tabs.forEach(function (tab) {
+        tab.addEventListener("click", function () {
+          var target = tab.getAttribute("data-tab");
+          tabs.forEach(function (t) { t.classList.remove("active"); });
+          tab.classList.add("active");
+          var scope = group.getAttribute("data-tabs");
+          document.querySelectorAll('[data-tab-panel="' + scope + '"]').forEach(function (p) {
+            p.classList.toggle("hidden", p.getAttribute("data-panel") !== target);
+          });
+        });
+      });
+    });
+  }
+
+  /* ---------- Feature block interactivity ---------- */
+  function initFeatureBlocks() {
+    document.querySelectorAll(".feature-block").forEach(function (b) {
+      b.addEventListener("click", function () {
+        var group = b.parentElement;
+        group.querySelectorAll(".feature-block").forEach(function (x) { x.classList.remove("active"); });
+        b.classList.add("active");
+      });
+    });
+  }
+
+  /* ---------- Helpers exposed globally ---------- */
+  window.ARK = {
+    icons: ICONS,
+    initReveal: initReveal,
+    initCounters: initCounters,
+    escapeHtml: function (s) {
+      if (s == null) return "";
+      return String(s).replace(/[&<>"']/g, function (c) {
+        return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+      });
+    },
+    timeAgo: function (dateStr) {
+      if (!dateStr) return "";
+      var d = new Date(dateStr);
+      if (isNaN(d)) return dateStr;
+      var days = Math.floor((Date.now() - d.getTime()) / 86400000);
+      if (days <= 0) return "Posted today";
+      if (days === 1) return "Posted 1 day ago";
+      if (days < 30) return "Posted " + days + " days ago";
+      var months = Math.floor(days / 30);
+      return "Posted " + months + (months === 1 ? " month ago" : " months ago");
+    },
+    formatDate: function (dateStr) {
+      if (!dateStr) return "—";
+      var d = new Date(dateStr);
+      if (isNaN(d)) return dateStr;
+      return d.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
+    },
+    toast: function (msg, type) {
+      var t = document.createElement("div");
+      t.className = "alert alert-" + (type || "info");
+      t.style.cssText = "position:fixed;top:100px;right:22px;z-index:3000;max-width:360px;box-shadow:var(--shadow-lg);background:#fff;";
+      t.innerHTML = (type === "success" ? ICONS.checkCircle : type === "error" ? ICONS.alert : ICONS.info) + "<span>" + msg + "</span>";
+      document.body.appendChild(t);
+      setTimeout(function () { t.style.transition = "opacity .4s"; t.style.opacity = "0"; }, 3200);
+      setTimeout(function () { t.remove(); }, 3700);
+    }
+  };
+
+  /* ---------- Boot ---------- */
+  function boot() {
+    var isAdmin = document.body && document.body.classList.contains("admin-body");
+    if (!isAdmin) {
+      buildHeader();
+      buildFooter();
+      buildFloating();
+    }
+    initReveal();
+    initCounters();
+    initFAQ();
+    initTabs();
+    initFeatureBlocks();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", boot);
+  } else {
+    boot();
+  }
+})();

@@ -1,0 +1,15 @@
+65:  var NAV = [
+67:    { label: "Services", children: [
+92:      return '<div class="nav-drop' + (childActive ? " active" : "") + '">' +
+93:        '<button type="button" class="nav-drop-toggle" aria-haspopup="true" aria-expanded="false">' +
+96:        '<div class="nav-drop-menu">' + links + "</div>" +
+109:  function buildHeader() {
+111:    var navHtml = NAV.map(function (n) { return navItemHtml(n, page); }).join("");
+143:      NAV.map(function (n) {
+176:    header.querySelectorAll(".nav-drop-toggle").forEach(function (btn) {
+182:        header.querySelectorAll(".nav-drop").forEach(function (d) {
+183:          if (d !== drop) { d.classList.remove("open"); var t = d.querySelector(".nav-drop-toggle"); if (t) t.setAttribute("aria-expanded", "false"); }
+188:      if (!e.target.closest(".nav-drop")) {
+189:        header.querySelectorAll(".nav-drop").forEach(function (d) {
+191:          var t = d.querySelector(".nav-drop-toggle"); if (t) t.setAttribute("aria-expanded", "false");
+444:      buildHeader();

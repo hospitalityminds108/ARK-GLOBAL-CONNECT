@@ -1,0 +1,16 @@
+<!-- ============ SOCIAL PROOF ============ -->
+<section class="section bg-cream">
+  <div class="container">
+    <div class="max-720 reveal">
+      <span class="eyebrow">Trusted By</span>
+      <h2 class="h2">What Our Clients &amp; Candidates Say.</h2>
+    </div>
+    <div class="testi-slider mt-4" id="testiSlider"></div>
+    <div class="flex justify-between items-center mt-3 flex-wrap gap-2">
+      <div class="chip-row">
+        <span class="chip">Google Reviews ★ 4.9</span>
+        <span class="chip">LinkedIn Recommendations</span>
+        <span class="chip">International Deployment Stories</span>
+      </div>
+      <a href="about.html" class="link-arrow">More about ARK →</a>
+    </div>

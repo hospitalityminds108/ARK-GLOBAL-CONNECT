@@ -1,0 +1,17 @@
+145:      card.addEventListener("click", function () {
+164:      card.addEventListener("click", function () {
+197:      chip.addEventListener("click", function () {
+219:        btn.addEventListener("click", function () {
+238:      pill.addEventListener("click", function () {
+279:    var back = $("wzBack"), next = $("wzNext"), hint = $("wzHint");
+296:  function goTo(step) {
+459:    var next = $("wzNext");
+516:    var next = $("wzNext"), back = $("wzBack");
+517:    if (next) next.addEventListener("click", function () {
+520:      if (state.step < TOTAL) goTo(state.step + 1);
+522:    if (back) back.addEventListener("click", function () { if (state.step > 1) goTo(state.step - 1); });
+525:    if (search) search.addEventListener("input", function () { renderRoles(search.value); });
+528:    if (restart) restart.addEventListener("click", function () {
+535:      goTo(1);
+539:    document.addEventListener("input", function (ev) {
+544:  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);

@@ -1,0 +1,4 @@
+Title: Find Your Next Opportunity | Jobs at ARK Global Konnect
+Result: Navigated to http://localhost:8080/jobs.html (title: Find Your Next Opportunity | Jobs at ARK Global Konnect, status: 200)
+Use see-image to view: /workspace/.screenshots/step_103.png
+=== END ===

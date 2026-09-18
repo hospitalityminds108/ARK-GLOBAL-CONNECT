@@ -1,0 +1,32 @@
+=== Konnect occurrences by file ===
+about.html:11
+admin.html:6
+candidates.html:6
+contact.html:9
+executive-search.html:3
+global-mobility.html:4
+global-reach.html:6
+global-recruitment.html:5
+hire-talent.html:6
+index.html:6
+industries.html:4
+insights.html:4
+internships.html:5
+job-detail.html:4
+jobs-india.html:4
+jobs-international.html:3
+jobs.html:4
+legal.html:10
+permanent-recruitment.html:4
+remote-hr.html:4
+rpo.html:4
+staffing.html:4
+thank-you.html:4
+js/clients.js:1
+js/config.js:1
+js/job-detail.js:5
+js/main.js:8
+data/jobs.json:1
+README.md:3
+=== total ===
+141

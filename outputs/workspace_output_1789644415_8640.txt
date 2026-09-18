@@ -1,0 +1,139 @@
+===ABOUT===
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About ARK Global Konnect | Global Workforce Partner</title>
+<meta name="description" content="ARK Global Konnect is a global workforce partner helping businesses hire, manage and mobilise talent across India and international markets. Learn about our mission, values and approach.">
+<meta name="keywords" content="about ARK Global Konnect, workforce partner, recruitment company, HR company, global mobility company, our story">
+<meta property="og:title" content="About ARK Global Konnect">
+<meta property="og:description" content="Workforce. HR. Global Mobility. One Partner. Learn about our mission and values.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://arkglobalkonnect.com/about.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"AboutPage","name":"About ARK Global Konnect","url":"https://arkglobalkonnect.com/about.html","description":"ARK Global Konnect is a global workforce partner offering recruitment, staffing, Remote HR and global mobility solutions."}
+</script>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+
+<section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>About ARK</span></nav>
+    <span class="eyebrow">Who We Are</span>
+    <h1 class="h1">Workforce. HR. Global Mobility.<br>One Partner.</h1>
+    <p class="lead max-720">ARK Global Konnect exists for one reason: to help businesses build stronger teams. We bring together recruitment, HR and global mobility under a single partner, so growing organisations can focus on their business instead of the complexity of people.</p>
+  </div>
+</section>
+
+<section class="section bg-ivory">
+  <div class="container">
+    <div class="split">
+      <div class="reveal">
+        <span class="eyebrow">Our Story</span>
+        <h2 class="h2">Built to Solve a Real Problem.</h2>
+        <p class="lead mt-2">Businesses were being asked to juggle recruitment agencies, HR consultants and immigration specialists — each with their own process, their own fees and their own gaps.</p>
+        <p class="muted">ARK Global Konnect was created to close those gaps. We combine the three disciplines that every growing business needs — finding people, managing people and moving people — into one joined-up service. One partner, one point of contact, one standard of care.</p>
+        <p class="muted">Today we support organisations across India and international markets, from single critical hires to complete workforce solutions. Our promise is simple: we help businesses build stronger teams, and we do it with honesty, expertise and genuine care for the people involved.</p>
+      </div>
+      <div class="split-media reveal reveal-delay-2">
+        <div class="curved-img" style="aspect-ratio:4/5">
+          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80" alt="Diverse professional team collaborating" loading="lazy" style="width:100%;height:100%;object-fit:cover">
+        </div>
+        <div class="media-badge"><b>One Partner</b><span>Workforce · HR · Mobility</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-dark">
+  <div class="container">
+    <div class="text-center mb-4 reveal"><span class="eyebrow center light">Our Mission</span><h2 class="h2" style="color:var(--light)">To Make Great Teams Possible.</h2><p class="lead max-720 mx-auto" style="color:rgba(255,255,255,0.75)">We believe the right people, in the right roles, with the right support, can transform a business. Our mission is to make that possible for organisations of every size — across borders and across industries.</p></div>
+    <div class="grid g4">
+      <div class="stat-block reveal"><b data-count="12" data-suffix="+">0</b><span>Industries Served</span></div>
+      <div class="stat-block reveal reveal-delay-1"><b data-count="10" data-suffix="+">0</b><span>Countries Reached</span></div>
+      <div class="stat-block reveal reveal-delay-2"><b data-count="98" data-suffix="%">0</b><span>Client Retention</span></div>
+      <div class="stat-block reveal reveal-delay-3"><b data-count="3" data-suffix="">0</b><span>Services, One Partner</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-beige">
+  <div class="container">
+    <div class="text-center mb-4 reveal"><span class="eyebrow center">Our Values</span><h2 class="h2">What We Stand For.</h2></div>
+    <div class="grid g3">
+      <div class="card reveal"><div class="card-icon" data-icon="shield"></div><h3>Integrity</h3><p>We never charge candidates. We give honest advice, even when it's not what you want to hear. We do what we say we will.</p></div>
+      <div class="card reveal reveal-delay-1"><div class="card-icon" data-icon="users"></div><h3>People First</h3><p>Behind every CV is a person, and behind every role is a team. We treat both with respect and care.</p></div>
+      <div class="card reveal reveal-delay-2"><div class="card-icon" data-icon="target"></div><h3>Excellence</h3><p>We hold ourselves to a high standard in every search, every placement and every interaction.</p></div>
+      <div class="card reveal"><div class="card-icon" data-icon="globe"></div><h3>Global Mindset</h3><p>We think beyond borders, connecting talent and opportunity wherever they are in the world.</p></div>
+      <div class="card reveal reveal-delay-1"><div class="card-icon" data-icon="zap"></div><h3>Technology With Heart</h3><p>We use technology to work faster and smarter, but people always make the final call.</p></div>
+      <div class="card reveal reveal-delay-2"><div class="card-icon" data-icon="heart"></div><h3>Partnership</h3><p>We measure our success by yours — long after the placement is made.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-ivory">
+  <div class="container">
+    <div class="text-center mb-4 reveal"><span class="eyebrow center">Our Approach</span><h2 class="h2">How We Work.</h2></div>
+    <div class="grid g2">
+      <div class="reveal">
+        <div class="process-step"><span class="ps-num">01</span><div><h4>Listen First</h4><p>We start by understanding your business, your goals and your constraints — not by sending CVs.</p></div></div>
+        <div class="process-step"><span class="ps-num">02</span><div><h4>Advise Honestly</h4><p>We tell you what's realistic, what it will cost and how long it will take. No inflated promises.</p></div></div>
+        <div class="process-step"><span class="ps-num">03</span><div><h4>Execute Rigorously</h4><p>We run a disciplined process with clear milestones and regular communication.</p></div></div>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <div class="process-step"><span class="ps-num">04</span><div><h4>Stay Accountable</h4><p>One consultant owns your engagement from start to finish and beyond.</p></div></div>
+        <div class="process-step"><span class="ps-num">05</span><div><h4>Support the Journey</h4><p>From sourcing to onboarding to mobility, we support the whole journey.</p></div></div>
+        <div class="process-step"><span class="ps-num">06</span><div><h4>Keep Improving</h4><p>We gather feedback and refine our approach for every future engagement.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-cream">
+  <div class="container">
+    <div class="text-center mb-4 reveal"><span class="eyebrow center">What We Do</span><h2 class="h2">Our Services.</h2></div>
+    <div class="grid g3">
+      <a href="hire-talent.html" class="card reveal"><div class="card-icon" data-icon="target"></div><h3>Hire Talent</h3><p>Permanent recruitment, executive search and talent acquisition.</p><span class="link-arrow">Learn more →</span></a>
+      <a href="staffing.html" class="card reveal reveal-delay-1"><div class="card-icon" data-icon="users"></div><h3>Staffing Solutions</h3><p>Contract, temporary and bulk staffing that flexes with demand.</p><span class="link-arrow">Learn more →</span></a>
+      <a href="remote-hr.html" class="card reveal reveal-delay-2"><div class="card-icon" data-icon="settings"></div><h3>Remote HR</h3><p>Outsourced HR operations, payroll and compliance.</p><span class="link-arrow">Learn more →</span></a>
+      <a href="global-recruitment.html" class="card reveal"><div class="card-icon" data-icon="globe"></div><h3>Global Recruitment</h3><p>Cross-border hiring with visa and relocation support.</p><span class="link-arrow">Learn more →</span></a>
+      <a href="global-mobility.html" class="card reveal reveal-delay-1"><div class="card-icon" data-icon="plane"></div><h3>Global Mobility</h3><p>Visa, relocation and compliance for international moves.</p><span class="link-arrow">Learn more →</span></a>
+      <a href="rpo.html" class="card reveal reveal-delay-2"><div class="card-icon" data-icon="layers"></div><h3>RPO</h3><p>Outsourced recruitment for ongoing, high-volume hiring.</p><span class="link-arrow">Learn more →</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-beige">
+  <div class="container max-820">
+    <div class="text-center mb-3 reveal"><span class="eyebrow center">FAQ</span><h2 class="h2">About ARK — Questions</h2></div>
+    <div class="faq-item"><button class="faq-q">What makes ARK different from other agencies?<span></span></button><div class="faq-a"><p>We combine recruitment, HR and global mobility in one partner, and we operate with a level of honesty and care that's rare in the industry. We never charge candidates, and we measure success by long-term outcomes.</p></div></div>
+    <div class="faq-item"><button class="faq-q">Where is ARK Global Konnect based?<span></span></button><div class="faq-a"><p>We are headquartered in India and serve clients and candidates across India and international markets, including the Gulf, Maldives, Europe and Asia.</p></div></div>
+    <div class="faq-item"><button class="faq-q">Do you work with small businesses?<span></span></button><div class="faq-a"><p>Yes. We work with organisations of all sizes, from small businesses making their first key hire to large enterprises with ongoing workforce needs.</p></div></div>
+    <div class="faq-item"><button class="faq-q">How do I get started with ARK?<span></span></button><div class="faq-a"><p>Simply contact us with your requirement. We'll arrange a conversation to understand your needs and propose the right approach.</p></div></div>
+  </div>
+</section>
+
+<section class="section bg-dark">
+  <div class="container text-center">
+    <span class="eyebrow center light reveal">Let's Talk</span>
+    <h2 class="h2 reveal" style="color:var(--light)">Let's Build Stronger Teams Together.</h2>
+    <p class="lead max-720 mx-auto reveal" style="color:rgba(255,255,255,0.75)">Whether you're hiring, growing or going global, we'd love to hear from you.</p>
+    <div class="hero-actions reveal mt-3" style="justify-content:center">
+      <a href="contact.html" class="btn btn-gold btn-lg">Contact ARK</a>
+      <a href="jobs.html" class="btn btn-ghost-light btn-lg">Browse Jobs</a>
+    </div>
+  </div>
+</section>
+
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script>document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll("[data-icon]").forEach(function(el){var k=el.getAttribute("data-icon");if(window.ARK_ICONS[k])el.innerHTML=window.ARK_ICONS[k];});});</script>
+</body>
+</html>

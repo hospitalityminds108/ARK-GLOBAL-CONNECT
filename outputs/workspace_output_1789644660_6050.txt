@@ -1,0 +1,5 @@
+./admin.html
+./contact.html
+./js/job-detail.js
+./legal.html
+./candidates.html

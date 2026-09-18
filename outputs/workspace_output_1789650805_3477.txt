@@ -1,0 +1,38 @@
+=== demo in HTML/JS (excluding README) ===
+./js/admin.js:340:  function resetDemo() {
+./js/admin.js:403:      bind("resetBtn", "click", resetDemo);
+
+=== Konnect anywhere in source ===
+./internships.html:12:<link rel="canonical" href="https://arkglobalkonnect.com/internships.html">
+./insights.html:12:<link rel="canonical" href="https://arkglobalkonnect.com/insights.html">
+./insights.html:19:{"@context":"https://schema.org","@type":"Blog","name":"ARK Global Connect Insights","url":"https://arkglobalkonnect.com/insights.html","description":"Practical insights on hiring, HR and global mobility."}
+./global-reach.html:12:<link rel="canonical" href="https://arkglobalkonnect.com/global-reach.html">
+./job-detail.html:10:<link rel="canonical" href="https://arkglobalkonnect.com/job-detail.html">
+./hire-talent.html:13:<link rel="canonical" href="https://arkglobalkonnect.com/hire-talent.html">
+./jobs-india.html:12:<link rel="canonical" href="https://arkglobalkonnect.com/jobs-india.html">
+./global-mobility.html:12:<link rel="canonical" href="https://arkglobalkonnect.com/global-mobility.html">
+./css/style.css:2:   ARK GLOBAL KONNECT — Design System
+./contact.html:12:<link rel="canonical" href="https://arkglobalkonnect.com/contact.html">
+./contact.html:19:{"@context":"https://schema.org","@type":"ContactPage","name":"Contact ARK Global Connect","url":"https://arkglobalkonnect.com/contact.html","description":"Contact ARK Global Connect for hiring, staffing, HR and global mobility enquiries."}
+./global-recruitment.html:12:<link rel="canonical" href="https://arkglobalkonnect.com/global-recruitment.html">
+./staffing.html:12:<link rel="canonical" href="https://arkglobalkonnect.com/staffing.html">
+./rpo.html:12:<link rel="canonical" href="https://arkglobalkonnect.com/rpo.html">
+./remote-hr.html:12:<link rel="canonical" href="https://arkglobalkonnect.com/remote-hr.html">
+./executive-search.html:12:<link rel="canonical" href="https://arkglobalkonnect.com/executive-search.html">
+./index.html:13:<link rel="canonical" href="https://arkglobalkonnect.com/">
+./index.html:26:  "url": "https://arkglobalkonnect.com/",
+./js/main.js:2:   ARK GLOBAL KONNECT — main.js
+./js/global-reach.js:2:   ARK GLOBAL KONNECT — global-reach.js
+./js/config.js:2:   ARK GLOBAL KONNECT — Global Configuration
+./js/jobs.js:2:   ARK GLOBAL KONNECT — jobs.js
+./js/clients.js:2:   ARK GLOBAL KONNECT — clients.js
+./js/forms.js:2:   ARK GLOBAL KONNECT — forms.js
+./legal.html:12:<link rel="canonical" href="https://arkglobalkonnect.com/legal.html">
+./industries.html:12:<link rel="canonical" href="https://arkglobalkonnect.com/industries.html">
+./industries.html:19:{"@context":"https://schema.org","@type":"Organization","name":"ARK Global Connect","description":"Global workforce partner recruiting across 12+ industries.","url":"https://arkglobalkonnect.com/industries.html"}
+./about.html:12:<link rel="canonical" href="https://arkglobalkonnect.com/about.html">
+./about.html:19:{"@context":"https://schema.org","@type":"AboutPage","name":"About ARK Global Connect","url":"https://arkglobalkonnect.com/about.html","description":"ARK Global Connect is a global workforce partner offering recruitment, staffing, Remote HR and global mobility solutions."}
+./jobs-international.html:12:<link rel="canonical" href="https://arkglobalkonnect.com/jobs-international.html">
+./jobs.html:10:<link rel="canonical" href="https://arkglobalkonnect.com/jobs.html">
+./candidates.html:12:<link rel="canonical" href="https://arkglobalkonnect.com/candidates.html">
+./permanent-recruitment.html:12:<link rel="canonical" href="https://arkglobalkonnect.com/permanent-recruitment.html">

@@ -1,0 +1,6 @@
+Result: Screenshot saved to /workspace/.screenshots/home.png
+Screenshot: /workspace/.screenshots/step_015.png
+Use see-image to view: /workspace/.screenshots/step_015.png
+Result: Screenshot saved to /workspace/.screenshots/legal.png
+Screenshot: /workspace/.screenshots/step_017.png
+Use see-image to view: /workspace/.screenshots/step_017.png

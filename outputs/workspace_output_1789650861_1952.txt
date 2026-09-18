@@ -1,0 +1,21 @@
+1096 css/style.css
+.site-header:not(.scrolled):not(.on-light) .nav-drop-toggle { color: var(--text); }
+.site-header .nav-drop:hover .nav-drop-toggle,
+.site-header .nav-drop.open .nav-drop-toggle,
+.site-header .nav-drop.active .nav-drop-toggle,
+.site-header:not(.scrolled):not(.on-light) .nav-drop:hover .nav-drop-toggle,
+.site-header:not(.scrolled):not(.on-light) .nav-drop.open .nav-drop-toggle,
+.site-header:not(.scrolled):not(.on-light) .nav-drop.active .nav-drop-toggle { color: var(--primary-blue); background: rgba(46,123,163,0.08); }
+
+/* Services submenu — solid white panel, dark items, always readable */
+.nav-drop-menu {
+  background: #FFFFFF;
+  border: 1px solid var(--stone);
+  box-shadow: 0 24px 60px rgba(26,58,82,0.18);
+}
+.nav-drop-menu a { color: var(--text); }
+.nav-drop-menu a:hover, .nav-drop-menu a.active { color: var(--primary-blue); background: rgba(46,123,163,0.08); }
+
+/* Hamburger — always dark */
+.site-header .hamburger span,
+.site-header:not(.scrolled):not(.on-light) .hamburger span { background: var(--text); }

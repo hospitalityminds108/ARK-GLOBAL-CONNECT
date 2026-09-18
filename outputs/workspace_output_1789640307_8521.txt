@@ -1,0 +1,26 @@
+19:    input.classList.add("invalid");
+22:    if (err) { err.textContent = msg; err.classList.add("show"); }
+26:    input.classList.remove("invalid");
+29:    if (err) { err.textContent = ""; err.classList.remove("show"); }
+77:    function show(file) {
+80:        if (errEl) { errEl.textContent = v.msg; errEl.classList.add("show"); }
+82:        selected.classList.remove("show");
+86:      if (errEl) { errEl.textContent = ""; errEl.classList.remove("show"); }
+89:      selected.classList.add("show");
+94:    input.addEventListener("change", function () { if (input.files[0]) show(input.files[0]); });
+96:      drop.addEventListener(ev, function (e2) { e2.preventDefault(); drop.classList.add("dragover"); });
+99:      drop.addEventListener(ev, function (e2) { e2.preventDefault(); drop.classList.remove("dragover"); });
+102:      if (e2.dataTransfer.files[0]) show(e2.dataTransfer.files[0]);
+106:      selected.classList.remove("show"); drop.style.display = "";
+164:        if (ce) { ce.textContent = "Please upload your CV (PDF, DOC or DOCX)."; ce.classList.add("show"); }
+201:        showApplySuccess(job, app, res);
+245:  function showApplySuccess(job, app, res) {
+249:    form.classList.add("hidden");
+255:    box.classList.remove("hidden");
+286:        if (ce) { ce.textContent = "Please upload your CV."; ce.classList.add("show"); }
+304:          var box = document.getElementById(opts.successId || "formSuccess");
+309:            box.classList.remove("hidden");
+315:          if (cvState) { cvState.file = null; var s = document.getElementById(opts.cv.selected); if (s) s.classList.remove("show"); var d = document.getElementById(opts.cv.drop); if (d) d.style.display = ""; }
+=== contact form success el ===
+72:          <div id="formSuccess" class="hidden mt-3"></div>
+130:  window.ARK_initGenericForm("contactForm", { subject: "Website Enquiry", successId: "formSuccess" });

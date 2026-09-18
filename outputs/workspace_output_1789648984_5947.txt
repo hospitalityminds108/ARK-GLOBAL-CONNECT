@@ -1,0 +1,11 @@
+  <div class="login-card">
+    <a href="index.html" class="logo" aria-label="ARK Global Connect home">
+      <span class="logo-text"><b>ARK Global Connect</b><span>Hire · Manage · Mobilise</span></span>
+    </a>
+    <h1>Admin Panel</h1>
+---
+      <a href="index.html" class="logo" aria-label="ARK Global Connect home">
+        <span class="logo-text"><b>ARK Global Connect</b><span>Admin Console</span></span>
+      </a>
+      <nav class="admin-nav" aria-label="Admin">
+        <a href="#" data-view="dashboard"><span data-icon="grid"></span>Dashboard</a>

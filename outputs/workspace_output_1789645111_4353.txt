@@ -1,0 +1,9 @@
+GR tab Europe -> European operations
+GR tab APAC -> APAC markets
+Industries total=12 after tech filter visible=1
+Industries after All -> 12
+Client roller items (A) -> 24
+Mobile hamburger x=336 w=42 (viewport 390)
+Mobile nav opens -> True
+Mobile nav closes -> True
+Contact form errors on empty submit -> 5

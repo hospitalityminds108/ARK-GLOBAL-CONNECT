@@ -1,0 +1,174 @@
+=== hire-talent.html tail ===
+    <div class="faq-item"><button class="faq-q">Can you hire for multiple roles at once?<span></span></button><div class="faq-a"><p>Absolutely. We support single critical hires and multi-role campaigns, including volume hiring for new sites, projects or market entries.</p></div></div>
+    <div class="faq-item"><button class="faq-q">Do you charge candidates any fee?<span></span></button><div class="faq-a"><p>Never. ARK Global Connect is paid by employers. Candidates are never charged for placement, interviews or documentation.</p></div></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section bg-dark">
+  <div class="container text-center">
+    <span class="eyebrow center light reveal">Let's Begin</span>
+    <h2 class="h2 reveal" style="color:var(--light)">Ready to Hire the Right Person?</h2>
+    <p class="lead max-720 mx-auto reveal" style="color:rgba(255,255,255,0.75)">Tell us about the role. We'll tell you honestly how we'd approach it, how long it should take and what it will cost.</p>
+    <div class="hero-actions reveal mt-3" style="justify-content:center">
+      <a href="contact.html" class="btn btn-gold btn-lg">Start a Search</a>
+      <a href="jobs.html" class="btn btn-ghost-light btn-lg">View Open Roles</a>
+    </div>
+  </div>
+</section>
+
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll("[data-icon]").forEach(function (el) {
+    var k = el.getAttribute("data-icon");
+    if (window.ARK_ICONS[k]) el.innerHTML = window.ARK_ICONS[k];
+  });
+});
+</script>
+</body>
+</html>
+
+=== contact.html form section ===
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact ARK Global Connect | Hire Talent or Find a Job</title>
+<meta name="description" content="Contact ARK Global Connect to hire talent, discuss staffing, Remote HR or global mobility, or to find your next job. Reach us by form, email, phone or WhatsApp.">
+<meta name="keywords" content="contact ARK Global Connect, hire talent, recruitment enquiry, staffing enquiry, HR enquiry, global mobility contact">
+<meta property="og:title" content="Contact ARK Global Connect">
+<meta property="og:description" content="Let's talk about hiring, HR or global mobility. Reach us by form, email, phone or WhatsApp.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://arkglobalkonnect.com/contact.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ContactPage","name":"Contact ARK Global Connect","url":"https://arkglobalkonnect.com/contact.html","description":"Contact ARK Global Connect for hiring, staffing, HR and global mobility enquiries."}
+</script>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+
+<section class="page-hero">
+  <div class="hero-media" aria-hidden="true">
+    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80" alt="A modern office meeting room ready for a client conversation" loading="eager" fetchpriority="high">
+  </div>
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>Contact</span></nav>
+    <span class="eyebrow">Get in Touch</span>
+    <h1 class="h1">Let's Talk About<br>Your People.</h1>
+    <p class="lead max-720">Whether you're hiring, growing or going global — or looking for your next role — we'd love to hear from you. Tell us what you need and we'll respond promptly.</p>
+  </div>
+</section>
+
+<section class="section bg-ivory">
+  <div class="container">
+    <div class="grid g2" style="align-items:start;gap:50px">
+      <!-- FORM -->
+      <div class="reveal">
+        <span class="eyebrow">Send a Message</span>
+        <h2 class="h2">How Can We Help?</h2>
+        <p class="muted mt-2">Complete the form and our team will get back to you. For urgent matters, use phone or WhatsApp.</p>
+        <div class="card mt-3" style="padding:36px">
+          <form id="contactForm" novalidate>
+            <div class="form-grid two">
+              <div class="field"><label for="name">Full Name <span class="req">*</span></label><input type="text" id="name" name="name" required placeholder="Your name"><span class="error-msg"></span></div>
+              <div class="field"><label for="email">Email <span class="req">*</span></label><input type="email" id="email" name="email" required placeholder="you@company.com"><span class="error-msg"></span></div>
+              <div class="field"><label for="mobile">Mobile <span class="req">*</span></label><input type="tel" id="mobile" name="mobile" required placeholder="+91 85913 52276"><span class="error-msg"></span></div>
+              <div class="field"><label for="company">Company</label><input type="text" id="company" name="company" placeholder="Your organisation"><span class="error-msg"></span></div>
+            </div>
+            <div class="field mt-2"><label for="interest">I'm Interested In <span class="req">*</span></label>
+              <select id="interest" name="interest" required>
+                <option value="">Select a service…</option>
+                <option>Hire Talent / Permanent Recruitment</option>
+                <option>Executive Search</option>
+                <option>Staffing Solutions</option>
+                <option>RPO</option>
+                <option>Remote HR</option>
+                <option>Global Recruitment</option>
+                <option>Global Mobility</option>
+                <option>Internships</option>
+                <option>I'm a Candidate Looking for a Job</option>
+                <option>Other</option>
+              </select><span class="error-msg"></span>
+            </div>
+            <div class="field mt-2"><label for="message">Message <span class="req">*</span></label><textarea id="message" name="message" required placeholder="Tell us about your requirement or question…"></textarea><span class="error-msg"></span></div>
+            <div class="checkbox-field mt-3">
+              <input type="checkbox" id="consent" name="consent" required>
+              <label for="consent">I consent to ARK Global Connect contacting me about my enquiry.</label>
+            </div>
+            <span class="error-msg" id="consentError"></span>
+            <button type="submit" class="btn btn-primary btn-lg btn-block mt-3">Send Message</button>
+          </form>
+          <div id="formSuccess" class="hidden mt-3"></div>
+        </div>
+      </div>
+
+      <!-- DETAILS -->
+      <div class="reveal reveal-delay-2">
+        <span class="eyebrow">Contact Details</span>
+        <h2 class="h2">Reach Us Directly.</h2>
+        <div class="card mt-3" style="padding:32px">
+          <div class="flex items-center gap-2 mb-3"><span class="card-icon" style="margin:0;width:48px;height:48px" data-icon="users"></span><div><b>Contact Person</b><br><span class="muted">Raghavendra Shetty · Founder &amp; Managing Director</span></div></div>
+          <div class="divider" style="margin:22px 0"></div>
+          <div class="flex items-center gap-2 mb-3"><span class="card-icon" style="margin:0;width:48px;height:48px" data-icon="mail"></span><div><b>Email</b><br><a href="mailto:arkglobalhm@gmail.com" class="link-arrow">arkglobalhm@gmail.com</a></div></div>
+          <div class="divider" style="margin:22px 0"></div>
+          <div class="flex items-center gap-2 mb-3"><span class="card-icon" style="margin:0;width:48px;height:48px" data-icon="phone"></span><div><b>Phone</b><br><a href="tel:+918591352276" class="link-arrow">+91 85913 52276</a></div></div>
+          <div class="divider" style="margin:22px 0"></div>
+          <div class="flex items-center gap-2 mb-3"><span class="card-icon" style="margin:0;width:48px;height:48px" data-icon="whatsapp"></span><div><b>WhatsApp</b><br><a href="https://wa.me/918591352276" target="_blank" rel="noopener" class="link-arrow">Chat with us</a></div></div>
+          <div class="divider" style="margin:22px 0"></div>
+          <div class="flex items-start gap-2"><span class="card-icon" style="margin:0;width:48px;height:48px;flex-shrink:0" data-icon="mapPin"></span><div><b>Head Office</b><br><span class="muted">Star Plaza, B 2104, Mahatma Gandhi Rd, opposite Sanjay Restaurant, above MM Mithaiwala, Chinchpada, Borivali East, Mumbai, Maharashtra 400066</span></div></div>
+        </div>
+
+        <div class="card mt-3" style="background:var(--grad-dark);color:var(--light);border:none;padding:32px">
+          <h3 style="color:var(--light)">Hiring? Start Here.</h3>
+          <p style="color:rgba(255,255,255,0.72)">Tell us the role, the volume and the timeline. We'll come back with an honest plan, cost and delivery date.</p>
+          <a href="hire-talent.html" class="btn btn-gold mt-2">Explore Hiring Services</a>
+        </div>
+
+        <div class="alert alert-info mt-3">ARK Global Connect never charges candidates for placement. If anyone requests payment on our behalf, please report it immediately.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<section class="section-sm bg-beige">
+  <div class="container">
+    <div class="text-center mb-3 reveal"><span class="eyebrow center">Find Us</span><h2 class="h2">Our Location</h2></div>
+    <div class="map-embed reveal">
+      <iframe title="ARK Global Connect location — Star Plaza, Borivali East, Mumbai" src="https://www.openstreetmap.org/export/embed.html?bbox=72.84%2C19.20%2C72.88%2C19.24&layer=mapnik&marker=19.2215%2C72.8570" loading="lazy" style="border:0;width:100%;height:100%"></iframe>
+    </div>
+    <p class="text-center muted mt-2 reveal">Star Plaza, B 2104, Mahatma Gandhi Rd, opposite Sanjay Restaurant, above MM Mithaiwala, Chinchpada, Borivali East, Mumbai, Maharashtra 400066</p>
+  </div>
+</section>
+
+<section class="section bg-beige">
+  <div class="container max-820">
+    <div class="text-center mb-3 reveal"><span class="eyebrow center">FAQ</span><h2 class="h2">Contact Questions</h2></div>
+    <div class="faq-item"><button class="faq-q">How quickly will you respond?<span></span></button><div class="faq-a"><p>We aim to respond to all enquiries within one business day. Urgent matters are best handled by phone or WhatsApp.</p></div></div>
+    <div class="faq-item"><button class="faq-q">I'm a candidate — should I use this form?<span></span></button><div class="faq-a"><p>You can, but the fastest route is to submit your CV on our For Candidates page or apply directly to a job. That ensures your profile reaches the right consultant.</p></div></div>
+    <div class="faq-item"><button class="faq-q">Do you charge candidates for placement?<span></span></button><div class="faq-a"><p>Never. ARK Global Connect is paid by employers. Candidates are never charged for placement, interviews or documentation.</p></div></div>
+    <div class="faq-item"><button class="faq-q">Can we arrange a call or meeting?<span></span></button><div class="faq-a"><p>Absolutely. Mention your preferred times in the message and we'll arrange a call or meeting at your convenience.</p></div></div>
+  </div>
+</section>
+
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/forms.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll("[data-icon]").forEach(function (el) {
+    var k = el.getAttribute("data-icon"); if (window.ARK_ICONS[k]) el.innerHTML = window.ARK_ICONS[k];
+  });
+  window.ARK_initGenericForm("contactForm", { subject: "Website Enquiry", successId: "formSuccess" });
+});
+</script>
+</body>
+</html>

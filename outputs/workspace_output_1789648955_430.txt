@@ -1,0 +1,5 @@
+admin.html:22:      <span class="logo-mark">ARK</span>
+admin.html:53:        <span class="logo-mark">ARK</span>
+js/main.js:119:          '<span class="logo-mark">ARK</span>' +
+js/main.js:139:        '<a href="index.html" class="logo"><span class="logo-mark">ARK</span>' +
+js/main.js:213:            '<a href="index.html" class="logo"><span class="logo-mark">ARK</span>' +

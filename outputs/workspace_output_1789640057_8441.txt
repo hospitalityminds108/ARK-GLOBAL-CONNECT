@@ -1,0 +1,69 @@
+HTML files: 22
+
+about.html
+    css/style.css (missing page)
+
+admin.html
+    css/style.css (missing page)
+
+candidates.html
+    css/style.css (missing page)
+
+contact.html
+    css/style.css (missing page)
+
+executive-search.html
+    css/style.css (missing page)
+
+global-mobility.html
+    css/style.css (missing page)
+
+global-recruitment.html
+    css/style.css (missing page)
+
+hire-talent.html
+    css/style.css (missing page)
+
+index.html
+    ' + r[1] + ' (missing page)
+    ' + s[2] + ' (missing page)
+    css/style.css (missing page)
+
+industries.html
+    css/style.css (missing page)
+
+insights.html
+    css/style.css (missing page)
+
+internships.html
+    css/style.css (missing page)
+
+job-detail.html
+    css/style.css (missing page)
+
+jobs-india.html
+    css/style.css (missing page)
+
+jobs-international.html
+    css/style.css (missing page)
+
+jobs.html
+    css/style.css (missing page)
+
+legal.html
+    css/style.css (missing page)
+
+permanent-recruitment.html
+    css/style.css (missing page)
+
+remote-hr.html
+    css/style.css (missing page)
+
+rpo.html
+    css/style.css (missing page)
+
+staffing.html
+    css/style.css (missing page)
+
+thank-you.html
+    css/style.css (missing page)

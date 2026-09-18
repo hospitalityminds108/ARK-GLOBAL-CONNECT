@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jobs in India | Domestic Opportunities | ARK Global Connect</title>
+<meta name="description" content="Find jobs in India across hospitality, IT, retail, BFSI and management. Domestic opportunities in Mumbai, Delhi, Bengaluru, Goa, Pune and more with ARK Global Connect.">
+<meta name="keywords" content="jobs in India, domestic jobs, India recruitment, hospitality jobs India, IT jobs India, retail jobs, BFSI jobs">
+<meta property="og:title" content="Jobs in India | ARK Global Connect">
+<meta property="og:description" content="Domestic job opportunities across India's leading industries and cities.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://arkglobalconnect.com/jobs-india.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+
+<section class="page-hero">
+  <div class="hero-media" aria-hidden="true">
+    <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1920&q=80" alt="An Indian city skyline representing domestic opportunities" loading="eager" fetchpriority="high">
+  </div>
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><a href="jobs.html">Jobs</a><span>/</span><span>Jobs in India</span></nav>
+    <span class="eyebrow">Domestic Opportunities</span>
+    <h1 class="h1">Jobs in India.</h1>
+    <p class="lead max-720">Opportunities across India's fastest-growing industries and cities — from hospitality and IT to retail, BFSI and management. Filter by city, industry and experience.</p>
+    <div class="hero-actions mt-3">
+      <a href="jobs.html" class="btn btn-outline btn-lg">All Jobs</a>
+      <a href="jobs-international.html" class="btn btn-outline btn-lg">International Jobs</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-sm bg-ivory">
+  <div class="container">
+    <div class="filter-bar">
+      <div class="filter-row">
+        <div class="field search-input-wrap"><label for="q">Search</label><span id="searchIcon"></span><input type="text" id="q" placeholder="Job title, skill or keyword"></div>
+        <div class="field"><label for="fCity">City</label><select id="fCity"></select></div>
+        <div class="field"><label for="fIndustry">Industry</label><select id="fIndustry"></select></div>
+        <div class="field"><label for="fType">Employment Type</label><select id="fType"></select></div>
+      </div>
+      <div class="flex justify-between items-center mt-2 flex-wrap gap-1">
+        <span class="small muted" id="resultCount">Loading…</span>
+        <button class="btn btn-outline btn-sm" id="clearFilters">Clear Filters</button>
+      </div>
+    </div>
+    <div class="grid g3 mt-4" id="jobsGrid"></div>
+  </div>
+</section>
+
+<section class="section bg-beige">
+  <div class="container max-820">
+    <div class="text-center mb-3 reveal"><span class="eyebrow center">FAQ</span><h2 class="h2">Jobs in India — Questions</h2></div>
+    <div class="faq-item"><button class="faq-q">Which cities do you recruit in?<span></span></button><div class="faq-a"><p>We recruit across major Indian cities including Mumbai, Delhi NCR, Bengaluru, Pune, Goa, Hyderabad and Chennai, as well as emerging markets.</p></div></div>
+    <div class="faq-item"><button class="faq-q">Are these jobs free to apply for?<span></span></button><div class="faq-a"><p>Yes. ARK Global Connect never charges candidates. Applying is always free.</p></div></div>
+    <div class="faq-item"><button class="faq-q">Are the listed jobs real vacancies?<span></span></button><div class="faq-a"><p>Our consultants publish live and upcoming opportunities across India and international markets. If a role is not listed, submit your CV and we will match you to suitable openings as they arise.</p></div></div>
+  </div>
+</section>
+
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/jobs.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("searchIcon").innerHTML = window.ARK_ICONS.search;
+  var filters = { status: "active", scope: "Domestic", q: "", city: "all", industry: "all", type: "all" };
+  var grid = document.getElementById("jobsGrid"), countEl = document.getElementById("resultCount");
+  function render() {
+    var jobs = window.ARK_applyFilters(window.ARKStore.all(), filters);
+    window.ARK_renderJobs(grid, jobs);
+    countEl.textContent = jobs.length + (jobs.length === 1 ? " opportunity found" : " opportunities found");
+  }
+  window.ARKStore.load().then(function () {
+    var active = window.ARKStore.active().filter(function (j) { return j.scope === "Domestic"; });
+    window.ARK_fillSelect(document.getElementById("fCity"), window.ARK_unique(active.map(function (j) { return j.city; })), "All Cities");
+    window.ARK_fillSelect(document.getElementById("fIndustry"), window.ARK_unique(active.map(function (j) { return j.industry; })), "All Industries");
+    window.ARK_fillSelect(document.getElementById("fType"), window.ARK_unique(active.map(function (j) { return j.type; })), "All Types");
+    render();
+  });
+  document.getElementById("q").addEventListener("input", function () { filters.q = this.value; render(); });
+  [["fCity","city"],["fIndustry","industry"],["fType","type"]].forEach(function (p) {
+    document.getElementById(p[0]).addEventListener("change", function () { filters[p[1]] = this.value; render(); });
+  });
+  document.getElementById("clearFilters").addEventListener("click", function () {
+    filters = { status: "active", scope: "Domestic", q: "", city: "all", industry: "all", type: "all" };
+    document.getElementById("q").value = "";
+    ["fCity","fIndustry","fType"].forEach(function (id) { document.getElementById(id).value = "all"; });
+    render();
+  });
+});
+</script>
+</body>
+</html>

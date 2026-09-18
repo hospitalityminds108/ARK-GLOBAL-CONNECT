@@ -1,0 +1,46 @@
+  </div>
+</section>
+
+<section class="section bg-ivory">
+  <div class="container">
+    <div class="grid g2" style="align-items:start;gap:50px">
+      <!-- FORM -->
+      <div class="reveal">
+        <span class="eyebrow">Send a Message</span>
+        <h2 class="h2">How Can We Help?</h2>
+        <p class="muted mt-2">Complete the form and our team will get back to you. For urgent matters, use phone or WhatsApp.</p>
+        <div class="card mt-3" style="padding:36px">
+          <form id="contactForm" novalidate>
+            <div class="form-grid two">
+              <div class="field"><label for="name">Full Name <span class="req">*</span></label><input type="text" id="name" name="name" required placeholder="Your name"><span class="error-msg"></span></div>
+              <div class="field"><label for="email">Email <span class="req">*</span></label><input type="email" id="email" name="email" required placeholder="you@company.com"><span class="error-msg"></span></div>
+              <div class="field"><label for="mobile">Mobile <span class="req">*</span></label><input type="tel" id="mobile" name="mobile" required placeholder="+91 90000 00000"><span class="error-msg"></span></div>
+              <div class="field"><label for="company">Company</label><input type="text" id="company" name="company" placeholder="Your organisation"><span class="error-msg"></span></div>
+            </div>
+            <div class="field mt-2"><label for="interest">I'm Interested In <span class="req">*</span></label>
+              <select id="interest" name="interest" required>
+                <option value="">Select a service…</option>
+                <option>Hire Talent / Permanent Recruitment</option>
+                <option>Executive Search</option>
+                <option>Staffing Solutions</option>
+                <option>RPO</option>
+                <option>Remote HR</option>
+                <option>Global Recruitment</option>
+                <option>Global Mobility</option>
+                <option>Internships</option>
+                <option>I'm a Candidate Looking for a Job</option>
+                <option>Other</option>
+              </select><span class="error-msg"></span>
+            </div>
+            <div class="field mt-2"><label for="message">Message <span class="req">*</span></label><textarea id="message" name="message" required placeholder="Tell us about your requirement or question…"></textarea><span class="error-msg"></span></div>
+            <div class="checkbox-field mt-3">
+              <input type="checkbox" id="consent" name="consent" required>
+              <label for="consent">I consent to ARK Global Konnect contacting me about my enquiry.</label>
+            </div>
+            <span class="error-msg" id="consentError"></span>
+            <button type="submit" class="btn btn-primary btn-lg btn-block mt-3">Send Message</button>
+          </form>
+          <div id="formSuccess" class="hidden mt-3"></div>
+        </div>
+      </div>
+

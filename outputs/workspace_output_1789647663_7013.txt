@@ -1,0 +1,5 @@
+About client tiles: 19
+Home roller items: 38
+ERRORS: 2
+   error Fetch API cannot load file:///workspace/data/jobs.json. URL scheme "file" is not supported.
+   error Fetch API cannot load file:///workspace/data/jobs.json. URL scheme "file" is not supported.

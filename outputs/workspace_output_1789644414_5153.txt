@@ -1,0 +1,132 @@
+# ARK GLOBAL KONNECT — Rework Plan
+
+## 1. Fix Empty Sections
+- [x] Add MutationObserver to initReveal() so dynamically-injected .reveal elements become visible
+- [x] Verify all homepage sections render content (services, industries, why, insights, jobs)
+
+## 2. New Color Palette
+- [x] Replace :root design tokens with new palette (navy/sky/gold/coral/green/cream/charcoal)
+- [x] Update all hardcoded rgba() values to match new palette
+- [x] Update gradients (hero, dark, gold, cream, sky, green)
+- [x] Update inline SVG colors in HTML files
+
+## 3. Responsiveness & Clarity
+- [x] Review grid breakpoints (g2/g3/g4) so content never mashes
+- [x] Fix filter bar, cards, admin tables on small screens
+- [x] Fix mobile header overflow (logo/hamburger)
+- [x] Ensure clear spacing/typography at 1440/1280/1024/768/480/390/375
+
+## 4. Header Nav Bar
+- [x] Restructure nav with Services dropdown (cleaner, less dense)
+- [x] Improve nav spacing, active states, CTA buttons
+- [x] Fix mobile nav behavior (grouped services)
+
+## 5. Clean Minimal UI/UX
+- [x] Reduce hero content density
+- [x] Consistent components
+
+## 6. Verify & Deploy
+- [x] Browser test all 22 pages, zero console errors, zero empty sections
+- [x] Functional tests (nav, filters, forms, admin login)
+- [x] Redeploy preview
+===CONFIG===
+/* ============================================================
+   ARK GLOBAL KONNECT — Global Configuration
+   ------------------------------------------------------------
+   Edit this single file to configure the whole website.
+   NOTE: This is a frontend-only project. Never place private
+   server credentials (SMTP passwords, secret API keys) here.
+   Only public identifiers (EmailJS public key, WhatsApp number)
+   belong in frontend code.
+   ============================================================ */
+
+window.ARK_CONFIG = {
+  /* ---------- Brand ---------- */
+  SITE_NAME: "ARK Global Konnect",
+  TAGLINE: "Hire. Manage. Mobilise. Globally.",
+  STATEMENT: "Workforce. HR. Global Mobility. One Partner.",
+
+  /* ---------- Contact ---------- */
+  COMPANY_EMAIL: "careers@arkglobalkonnect.com",
+  HIRE_EMAIL: "hire@arkglobalkonnect.com",
+  PHONE_DISPLAY: "+91 90000 00000",
+  PHONE_TEL: "+919000000000",
+
+  /* WhatsApp number in international format, digits only (no + or spaces) */
+  WHATSAPP_NUMBER: "919000000000",
+
+  /* ---------- Admin (frontend-only demo login) ----------
+     WARNING: Client-side auth is NOT secure. This is a lightweight
+     management interface only. Use a real backend for production. */
+  ADMIN_ID: "admin",
+  ADMIN_PASSWORD: "ARK@2026",
+
+  /* ---------- EmailJS (public identifiers only) ----------
+     Create a free account at https://www.emailjs.com and paste your
+     public key, service id and template id below. Leave the placeholders
+     untouched to run in "demo mode" (email step is skipped gracefully). */
+  EMAILJS_PUBLIC_KEY: "YOUR_EMAILJS_PUBLIC_KEY",
+  EMAILJS_SERVICE_ID: "YOUR_EMAILJS_SERVICE_ID",
+  EMAILJS_TEMPLATE_ID: "YOUR_EMAILJS_TEMPLATE_ID",
+
+  /* ---------- Uploads ---------- */
+  MAX_CV_MB: 5,
+  ALLOWED_CV_TYPES: [
+    "application/pdf",
+    "application/msword",
+    "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+  ],
+
+  /* ---------- Data ---------- */
+  JOBS_JSON: "data/jobs.json",
+  STORAGE_KEYS: {
+    JOBS: "ark_jobs_v1",
+    APPLICATIONS: "ark_applications_v1",
+    SESSION: "ark_admin_session_v1",
+    SEEDED: "ark_seeded_v1"
+  },
+
+  /* ---------- Social ---------- */
+  SOCIAL: {
+    linkedin: "https://www.linkedin.com/",
+    instagram: "https://www.instagram.com/",
+    facebook: "https://www.facebook.com/",
+    youtube: "https://www.youtube.com/"
+  }
+};
+
+/* Helper: is EmailJS configured? */
+window.ARK_CONFIG.emailjsReady = function () {
+  var c = window.ARK_CONFIG;
+  return (
+    c.EMAILJS_PUBLIC_KEY &&
+    c.EMAILJS_PUBLIC_KEY.indexOf("YOUR_") !== 0 &&
+    c.EMAILJS_SERVICE_ID &&
+    c.EMAILJS_SERVICE_ID.indexOf("YOUR_") !== 0 &&
+    c.EMAILJS_TEMPLATE_ID &&
+    c.EMAILJS_TEMPLATE_ID.indexOf("YOUR_") !== 0
+  );
+};
+===JS DIR===
+css/:
+total 56
+drwxr-xr-x  2 root root  4096 Sep 17 10:40 .
+drwxr-xr-x 11 user user  4096 Sep 17 11:13 ..
+-rw-r--r--  1 root root 47786 Sep 17 10:50 style.css
+
+data/:
+total 40
+drwxr-xr-x  2 root root  4096 Sep 17 09:55 .
+drwxr-xr-x 11 user user  4096 Sep 17 11:13 ..
+-rw-r--r--  1 root root 32625 Sep 17 09:55 jobs.json
+
+js/:
+total 108
+drwxr-xr-x  2 root root  4096 Sep 17 10:00 .
+drwxr-xr-x 11 user user  4096 Sep 17 11:13 ..
+-rw-r--r--  1 root root 19568 Sep 17 10:00 admin.js
+-rw-r--r--  1 root root  2737 Sep 17 09:55 config.js
+-rw-r--r--  1 root root 14099 Sep 17 09:59 forms.js
+-rw-r--r--  1 root root 15382 Sep 17 10:48 job-detail.js
+-rw-r--r--  1 root root  8485 Sep 17 09:58 jobs.js
+-rw-r--r--  1 root root 30964 Sep 17 10:36 main.js

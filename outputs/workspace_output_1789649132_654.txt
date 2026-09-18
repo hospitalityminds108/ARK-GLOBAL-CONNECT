@@ -1,0 +1,4 @@
+index.html           logoText='ARK Global Connect' hasGoldMark=False
+about.html           logoText='ARK Global Connect' hasGoldMark=False
+hire-talent.html     logoText='ARK Global Connect' hasGoldMark=False
+Errors: 0

@@ -1,0 +1,3 @@
+Result: JS result: 16 cards after International filter
+=== mobile ===
+Result: JS result: resized

@@ -1,0 +1,26 @@
+about.html                   nav=rgb(44, 44, 44)
+admin.html                   nav=None
+candidates.html              nav=rgb(44, 44, 44)
+contact.html                 nav=rgb(44, 44, 44)
+executive-search.html        nav=rgb(44, 44, 44)
+global-mobility.html         nav=rgb(44, 44, 44)
+global-reach.html            nav=rgb(44, 44, 44)
+global-recruitment.html      nav=rgb(44, 44, 44)
+hire-talent.html             nav=rgb(44, 44, 44)
+index.html                   nav=rgb(46, 123, 163)
+industries.html              nav=rgb(44, 44, 44)
+insights.html                nav=rgb(44, 44, 44)
+internships.html             nav=rgb(44, 44, 44)
+job-detail.html              nav=rgb(44, 44, 44)
+jobs-india.html              nav=rgb(44, 44, 44)
+jobs-international.html      nav=rgb(44, 44, 44)
+jobs.html                    nav=rgb(44, 44, 44)
+legal.html                   nav=rgb(44, 44, 44)
+permanent-recruitment.html   nav=rgb(44, 44, 44)
+remote-hr.html               nav=rgb(44, 44, 44)
+rpo.html                     nav=rgb(44, 44, 44)
+staffing.html                nav=rgb(44, 44, 44)
+thank-you.html               nav=rgb(44, 44, 44)
+
+Issues: 0 Errors: 0
+Responsive overflow: 0
