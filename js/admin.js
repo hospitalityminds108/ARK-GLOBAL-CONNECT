@@ -384,7 +384,14 @@
       showView("dashboard");
       // nav
       document.querySelectorAll(".admin-nav a[data-view]").forEach(function (a) {
-        a.addEventListener("click", function (ev) { ev.preventDefault(); showView(a.getAttribute("data-view")); });
+        a.addEventListener("click", function (ev) {
+          ev.preventDefault();
+          showView(a.getAttribute("data-view"));
+          var sidebar = document.querySelector(".admin-sidebar");
+          var toggle = document.getElementById("adminMenuToggle");
+          if (sidebar) sidebar.classList.remove("open");
+          if (toggle) toggle.setAttribute("aria-expanded", "false");
+        });
       });
       var logoutBtn = document.getElementById("logoutBtn");
       if (logoutBtn) logoutBtn.addEventListener("click", logout);
@@ -395,7 +402,10 @@
       // sidebar toggle (mobile)
       var toggle = document.getElementById("adminMenuToggle");
       if (toggle) toggle.addEventListener("click", function () {
-        document.querySelector(".admin-sidebar").classList.toggle("open");
+        var sidebar = document.querySelector(".admin-sidebar");
+        if (!sidebar) return;
+        var isOpen = sidebar.classList.toggle("open");
+        toggle.setAttribute("aria-expanded", String(isOpen));
       });
       // import/export
       bind("exportJobsBtn", "click", exportJobs);
