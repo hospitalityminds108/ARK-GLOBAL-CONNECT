@@ -1,2 +1,0 @@
-copied
-server up

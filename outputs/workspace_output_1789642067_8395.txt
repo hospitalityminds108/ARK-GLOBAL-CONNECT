@@ -1,4 +1,0 @@
-Title: Hotel Manager Jobs in Goa | ARK Global Konnect
-Result: Navigated to http://localhost:8080/job-detail.html?id=ark-hotel-manager-goa (title: Hotel Manager Jobs in Goa | ARK Global Konnect, status: 200)
-Use see-image to view: /workspace/.screenshots/step_116.png
-=== END ===

@@ -1,4 +1,0 @@
-alpha bbox: (87, 122, 1003, 960)
-y=200 opaque x range: (569, 671)
-y=540 opaque x range: (128, 798)
-y=900 opaque x range: (131, 1002)

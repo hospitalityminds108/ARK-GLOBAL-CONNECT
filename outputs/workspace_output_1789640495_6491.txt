@@ -1,6 +1,0 @@
-645:@media (prefers-reduced-motion: reduce) {
-662:@media (max-width: 1100px) {
-669:@media (max-width: 900px) {
-685:@media (max-width: 640px) {
-701:@media (max-width: 400px) {
-707:@media print {

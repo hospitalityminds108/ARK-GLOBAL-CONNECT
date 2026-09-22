@@ -1,9 +1,0 @@
-=== remaining logo-mark (non-client) ===
-0
-=== check main.js logo lines ===
-118:        '<a href="index.html" class="logo" aria-label="ARK Global Connect home">' +
-120:          '<span class="logo-text"><b>ARK Global Connect</b><span>Hire · Manage · Mobilise</span></span>' +
-139:        '<a href="index.html" class="logo">' +
-140:          '<span class="logo-text"><b>ARK Global Connect</b><span>Hire · Manage · Mobilise</span></span></a>' +
-213:            '<a href="index.html" class="logo">' +
-214:              '<span class="logo-text"><b>ARK Global Connect</b><span>Hire · Manage · Mobilise</span></span></a>' +

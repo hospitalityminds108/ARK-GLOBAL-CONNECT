@@ -1,5 +1,0 @@
-=== Konnect in source files (excluding caches) ===
-NONE FOUND
-
-=== logo-mark in source ===
-./js/clients.js:37:      '<span class="client-logo-mark" style="--cl:' + c.color + ';width:' + s + "px;height:" + s + 'px">' +

@@ -1,1 +1,0 @@
-Result: JS result: header present: false | footer present: false | floating: false

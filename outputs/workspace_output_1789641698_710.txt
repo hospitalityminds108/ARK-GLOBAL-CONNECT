@@ -1,3 +1,0 @@
-Result: JS result: resized
-Use see-image to view: /workspace/.screenshots/step_114.png
-=== END ===

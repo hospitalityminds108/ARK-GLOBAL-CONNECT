@@ -1,5 +1,0 @@
-=== 'demo' (case-insensitive) in HTML/JS/CSS/JSON ===
-NONE FOUND
-
-=== 'Konnect' ===
-NONE FOUND

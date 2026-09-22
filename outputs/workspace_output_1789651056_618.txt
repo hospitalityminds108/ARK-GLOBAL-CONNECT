@@ -1,6 +1,0 @@
-type cards: 6
-next disabled after type select: False
-category cards: 16
-role chips: 24
-role count: 2 selected
-Errors: 0

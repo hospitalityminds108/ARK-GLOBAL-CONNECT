@@ -1,4 +1,0 @@
-Use see-image to view: /workspace/.screenshots/step_090.png
-=== END ===
-Title: REVEAL_LEFT_58
-Result: JS result: reveal_left=51

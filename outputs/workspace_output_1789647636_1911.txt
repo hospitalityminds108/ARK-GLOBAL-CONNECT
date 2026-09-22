@@ -1,9 +1,0 @@
-81:<section class="section-sm clients-section">
-84:      <span class="eyebrow center">Trusted By</span>
-85:      <h2 class="h2">Brands That Build With ARK.</h2>
-90:    <div class="client-roll-track" id="clientRollA"></div>
-93:    <div class="client-roll-track" id="clientRollB"></div>
-299:      <span class="eyebrow">Trusted By</span>
-358:    var rollHtml = window.ARK_CLIENTS.map(window.ARK_clientRoll).join("");
-359:    var ra = document.getElementById("clientRollA");
-360:    var rb = document.getElementById("clientRollB");

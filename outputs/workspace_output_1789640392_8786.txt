@@ -1,2 +1,0 @@
-Result: JS result: 12 industry cards
-Result: JS result: 9 insight cards

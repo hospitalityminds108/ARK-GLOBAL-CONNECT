@@ -1,6 +1,0 @@
-Result: JS result: Privacy Policy | Terms & Conditions | Candidate Disclaimer | Employer Terms | Recruitment Fraud Alert
-=== chip css ===
-531:.chip-row { display: flex; flex-wrap: wrap; gap: 10px; }
-532:.chip { padding: 9px 18px; border-radius: 100px; border: 1.5px solid var(--stone); font-size: 0.85rem; font-weight: 500; background: var(--light); transition: 0.3s; cursor: pointer; }
-533:.chip:hover { border-color: var(--gold); }
-534:.chip.active { background: var(--deep-green); color: var(--light); border-color: var(--deep-green); }

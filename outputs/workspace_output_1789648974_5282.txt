@@ -1,9 +1,0 @@
-      '<div class="container">' +
-        '<div class="footer-top">' +
-          '<div class="footer-brand">' +
-            '<a href="index.html" class="logo">' +
-              '<span class="logo-text"><b>ARK Global Connect</b><span>Hire · Manage · Mobilise</span></span></a>' +
-            '<p class="footer-tagline">Hire. Manage. Mobilise. Globally.</p>' +
-            '<p>Workforce. HR. Global Mobility. One Partner. From finding the right talent to managing your workforce and moving people across borders, ARK Global Connect helps businesses build stronger teams.</p>' +
-            '<ul class="footer-contact">' +
-              '<li>' + ICONS.mapPin + '<span>' + (CFG.ADDRESS_FULL || "Mumbai, India") + '</span></li>' +

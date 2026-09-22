@@ -1,4 +1,0 @@
-updated admin.html
-updated index.html
-updated legal.html
-done

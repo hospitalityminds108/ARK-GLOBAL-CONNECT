@@ -1,2 +1,0 @@
-Result: JS result: dispatched
-Result: JS result: success visible: false | text: 

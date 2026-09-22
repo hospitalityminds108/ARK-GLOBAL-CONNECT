@@ -1,4 +1,0 @@
-37:          '<a href="jobs.html" class="btn btn-primary">Return to Jobs ' + ICONS.arrowRight + "</a>" +
-116:            '<a href="#apply" class="btn btn-gold">Apply Now ' + ICONS.arrowRight + "</a>" +
-163:                '<a href="#apply" class="btn btn-primary btn-block mt-3">Apply Now</a>' +
-215:              '<button type="submit" class="btn btn-primary btn-lg btn-block mt-3" id="applyBtn">Apply Now ' + ICONS.arrowRight + "</button>" +

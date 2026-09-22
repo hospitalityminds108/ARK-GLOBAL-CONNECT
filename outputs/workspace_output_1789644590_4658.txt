@@ -1,8 +1,0 @@
-main.js patched OK
-79:    { label: "Global Reach", href: "global-reach.html" },
-217:            '<ul class="footer-contact">' +
-432:  function loadScript(src, cb) {
-454:    // Global Reach section on every public page + client logo helpers.
-456:      loadScript("js/clients.js", function () {
-457:        loadScript("js/global-reach.js", function () {
-458:          if (window.ARK_initGlobalReach) window.ARK_initGlobalReach();

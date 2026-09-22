@@ -1,4 +1,0 @@
-done
-123:          '<a href="hire.html" class="btn btn-outline btn-sm">I Want to Hire</a>' +
-150:        '<a href="hire.html" class="btn btn-primary btn-block">I Want to Hire</a>' +
-229:            '<a href="hire.html">Submit a Requirement</a>' +

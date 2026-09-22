@@ -1,4 +1,0 @@
-21:    <a href="index.html" class="logo" aria-label="ARK Global Connect home">
-22:      <span class="logo-text"><b>ARK Global Connect</b><span>Hire · Manage · Mobilise</span></span>
-51:      <a href="index.html" class="logo" aria-label="ARK Global Connect home">
-52:        <span class="logo-text"><b>ARK Global Connect</b><span>Admin Console</span></span>

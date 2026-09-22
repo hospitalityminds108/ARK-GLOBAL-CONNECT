@@ -1,2 +1,0 @@
-main.js updated OK
-JS SYNTAX OK

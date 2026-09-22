@@ -1,4 +1,0 @@
-hire-talent.html       nav=rgb(44, 44, 44) toggle=rgb(46, 123, 163) menuItem=rgb(46, 123, 163) menuBg=rgb(255, 255, 255)
-about.html             nav=rgb(44, 44, 44) toggle=rgb(46, 123, 163) menuItem=rgb(44, 44, 44) menuBg=rgb(255, 255, 255)
-index.html             nav=rgb(46, 123, 163) toggle=rgb(46, 123, 163) menuItem=rgb(44, 44, 44) menuBg=rgb(255, 255, 255)
-global-reach.html      nav=rgb(44, 44, 44) toggle=rgb(46, 123, 163) menuItem=rgb(44, 44, 44) menuBg=rgb(255, 255, 255)

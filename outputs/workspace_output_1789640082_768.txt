@@ -1,4 +1,0 @@
-index:200
-admin:200
-legal:200
-jobs.json:200

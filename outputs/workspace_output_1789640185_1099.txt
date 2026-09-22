@@ -1,1 +1,0 @@
-['ark-hotel-manager-goa', 'ark-front-office-manager-mumbai', 'ark-revenue-manager-bengaluru', 'ark-executive-chef-goa', 'ark-hr-manager-pune', 'ark-software-developer-bengaluru']

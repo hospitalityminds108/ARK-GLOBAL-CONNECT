@@ -1,5 +1,0 @@
-index.html         logo='ARK Global Connect' goldMark=False hasKonnect=False
-about.html         logo='ARK Global Connect' goldMark=False hasKonnect=False
-hire-talent.html   logo='ARK Global Connect' goldMark=False hasKonnect=False
-admin.html         logo='ARK Global Connect' goldMark=False hasKonnect=False
-Errors: 0

@@ -1,1 +1,0 @@
-resize via CDP not available; use screenshot

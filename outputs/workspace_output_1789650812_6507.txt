@@ -1,4 +1,0 @@
-=== verify ===
-CLEAN - no Konnect
-=== demo check ===
-CLEAN - no demo

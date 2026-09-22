@@ -1,2 +1,0 @@
-CSS appended. Total lines:
-1339 css/style.css

@@ -1,6 +1,0 @@
-logo.png status:
-200
-main.js has logo-img:
-3
-style.css has logo-img:
-7

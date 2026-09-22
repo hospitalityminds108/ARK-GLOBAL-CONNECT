@@ -1,6 +1,0 @@
-done
-130:      if (!ready) return { ok: false, demo: true };
-133:        .catch(function () { return { ok: false, demo: false }; });
-143:  /* ---------- Save application locally (demo) ---------- */
-252:      : (res.demo
-306:            : (res.demo ? "Your details have been captured — please also send them on WhatsApp so our team receives them instantly."

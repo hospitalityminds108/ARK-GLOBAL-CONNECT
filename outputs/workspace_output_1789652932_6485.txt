@@ -1,4 +1,0 @@
-92:      return '<div class="nav-drop' + (childActive ? " active" : "") + '">' +
-93:        '<button type="button" class="nav-drop-toggle" aria-haspopup="true" aria-expanded="false">' +
-96:        '<div class="nav-drop-menu">' + links + "</div>" +
-121:        '<nav class="nav" aria-label="Primary">' + navHtml + "</nav>" +

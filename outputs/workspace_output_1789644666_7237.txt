@@ -1,7 +1,0 @@
-admin.html:150:              <div class="field"><label>Contact Email</label><input type="email" name="contact" placeholder="careers@arkglobalkonnect.com"></div>
-contact.html:47:              <div class="field"><label for="mobile">Mobile <span class="req">*</span></label><input type="tel" id="mobile" name="mobile" required placeholder="+91 90000 00000"><span class="error-msg"></span></div>
-js/job-detail.js:192:                field("Mobile", "mobile", "tel", true, "+91 90000 00000") +
-legal.html:64:          <p>You may request access to, correction of, or deletion of your personal data at any time by contacting us at <a href="mailto:careers@arkglobalkonnect.com">careers@arkglobalkonnect.com</a>. We will respond within a reasonable timeframe.</p>
-legal.html:120:          <p>Always confirm communication through our official channels: email <a href="mailto:careers@arkglobalkonnect.com">careers@arkglobalkonnect.com</a> or phone <a href="tel:+919000000000">+91 90000 00000</a>. If in doubt, contact us before responding to any suspicious message.</p>
-legal.html:136:      <a href="mailto:careers@arkglobalkonnect.com" class="btn btn-ghost" style="color:var(--light);border-color:rgba(255,255,255,0.3)">Email Us</a>
-candidates.html:85:          <div class="field"><label for="mobile">Mobile <span class="req">*</span></label><input type="tel" id="mobile" name="mobile" required placeholder="+91 90000 00000"><span class="error-msg"></span></div>

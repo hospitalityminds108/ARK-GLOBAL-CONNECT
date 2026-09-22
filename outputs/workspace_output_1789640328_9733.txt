@@ -1,2 +1,0 @@
-Result: JS result: dispatched
-Result: JS result: success visible: true | Email is in demo mode (EmailJS not configured). Your details were captured local

@@ -1,4 +1,0 @@
-224:  function initReveal() {
-321:    initReveal: initReveal,
-358:  function boot() {
-365:    initReveal();
